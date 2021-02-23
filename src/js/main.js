@@ -7,7 +7,7 @@ const btns = document.querySelectorAll('.btn'),
 
 
 
-const swiper = new Swiper('.services-slider', {
+const servicesSlider = new Swiper('.services-slider', {
   loop: true,
   slidesPerView: 1,
   pagination: {
@@ -51,3 +51,11 @@ for (let i = 0; i < closeBtn.length; i++) {
 
 // start imaskjs
 const mask = IMask(element, maskOptions);
+
+const clientsSlider = new Swiper('.clients-slider', {
+  loop: true,
+  slidesPerView: 4,
+  autoplay: {
+    delay: 3000,
+  },
+});

@@ -1,0 +1,30 @@
+.clients{
+  margin-bottom: 70px;
+  &-slider{
+    position: relative;
+    overflow-x: hidden;
+  }
+  &__title{
+    margin-bottom: 30px;
+    font-size: 32px;
+    line-height: 38px;
+    text-align: center;
+    @include f700;
+  }
+}
+.client__item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100px;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+  img{
+    display: block;
+    height: auto;
+  }
+  &:hover{
+    opacity: 1;
+    transition: opacity 0.3s;
+  }
+}

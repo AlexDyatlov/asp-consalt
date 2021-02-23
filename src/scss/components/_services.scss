@@ -1,16 +1,19 @@
-.services-slider{
-  position: relative;
-}
-.swiper-slide{
-  min-height: 500px;
-  background: center/cover no-repeat;
-  &::before{
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.4);
+.services{
+  margin-bottom: 70px;
+  &-slider{
+    position: relative;
+  }
+  &-item{
+    min-height: 500px;
+    background: center/cover no-repeat;
+    &::before{
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.4);
+    }
   }
 }
 .services__content{
