@@ -1,5 +1,8 @@
-// COLORS
-:root {
-  --color-black: #000;
-  --color-white: #fff;
+@mixin f400{
+  font-family: "Montserrat-Regular", sans-serif;
+  font-weight: 400;
+}
+@mixin f700{
+  font-family: "Montserrat-Bolt", sans-serif;
+  font-weight: 700;
 }

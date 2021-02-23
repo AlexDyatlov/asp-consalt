@@ -459,12 +459,8 @@
 			"extend"
 		],
 		"at-rule-empty-line-before": [
-			"always",
+			"never",
 			{
-				"except": [
-					"blockless-after-same-name-blockless",
-					"first-nested"
-				],
 				"ignore": [
 					"after-comment"
 				],
@@ -503,7 +499,7 @@
 		"block-opening-brace-newline-after": "always-multi-line",
 		"block-opening-brace-newline-before": "never-single-line",
 		"block-opening-brace-space-after": "always-single-line",
-		"block-opening-brace-space-before": "always",
+		"block-opening-brace-space-before": "never",
 		"color-hex-case": "lower",
 		"color-hex-length": "short",
 		"color-named": "never",
@@ -643,11 +639,8 @@
 		"property-no-vendor-prefix": true,
 		"property-whitelist": null,
 		"rule-empty-line-before": [
-			"always-multi-line",
+			"never",
 			{
-				"except": [
-					"first-nested"
-				],
 				"ignore": [
 					"after-comment"
 				]
