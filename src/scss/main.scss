@@ -1,10 +1,11 @@
-:root {
+:root{
   --color-black: #000;
   --color-white: #fff;
   --color-white2: rgb(252, 252, 252);
   --color-grey: #eee;
-  --color-blue: rgb(0, 0, 250);
+  --color-blue: #3b55e6;
   --color-grey2: #acb5bd;
+  --color-dovgray: #666;
 }
 
 // CUSTOM COMPONENTS STYLES
@@ -21,4 +22,5 @@
 @import "./components/nav";
 @import "./components/services";
 @import "./components/modals";
+@import "./components/about";
 @import "./components/clients";
