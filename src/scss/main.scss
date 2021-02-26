@@ -4,8 +4,10 @@
   --color-white2: rgb(252, 252, 252);
   --color-grey: #eee;
   --color-blue: #3b55e6;
-  --color-grey2: #acb5bd;
+  --color-dark-blue: #172f53;
+  --color-silver: #acb5bd;
   --color-dovgray: #666;
+  --color-emperor: #555;
 }
 
 // CUSTOM COMPONENTS STYLES
@@ -25,3 +27,4 @@
 @import "./components/about";
 @import "./components/advantages";
 @import "./components/clients";
+@import "./components/footer";

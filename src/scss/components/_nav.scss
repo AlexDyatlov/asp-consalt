@@ -26,7 +26,8 @@
       background-color: var(--color-blue);
       transition: all 0.3s;
     }
-    &:hover, &:focus{
+    &:hover,
+    &:focus{
       color: var(--color-blue);
       &::before{
         left: 0;
@@ -55,7 +56,7 @@
   opacity: 0;
   transition: all 0.3s;
   li + li{
-    border-top: 0.5px solid var(--color-grey2);
+    border-top: 0.5px solid var(--color-silver);
   }
   a{
     padding: 7px 10px;
@@ -79,7 +80,7 @@
     top: 20px;
     width: 10px;
     height: 10px;
-    background: center/cover no-repeat url('../../img/arrow-menu.svg');
+    background: center/cover no-repeat url('../img/arrow-menu.svg');
     transition: transform 0.3s;
   }
 }
