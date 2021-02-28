@@ -1,5 +1,6 @@
 :root{
   --color-black: #000;
+  --color-shark: #1e1e25;
   --color-white: #fff;
   --color-white2: rgb(252, 252, 252);
   --color-grey: #eee;
@@ -8,6 +9,7 @@
   --color-silver: #acb5bd;
   --color-dovgray: #666;
   --color-emperor: #555;
+  --color-wild-sand: #f5f5f5;
 }
 
 // CUSTOM COMPONENTS STYLES
@@ -28,3 +30,5 @@
 @import "./components/advantages";
 @import "./components/clients";
 @import "./components/footer";
+@import "./components/breadcrumbs";
+@import "./components/contacts";

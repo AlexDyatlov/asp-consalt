@@ -6,10 +6,18 @@
         Оставьте свои контакты, мы свяжемся с Вами в ближайшее время.
       </p>
       <form class="header__form">
-        <input type="text" placeholder="Ваше имя" required>
-        <input type="text" id="phone" placeholder="Ваш телефон" required>
-        <input type="email" placeholder="Ваш email" required>
-        <button type="submit">Отправить</button>
+        <input class="header__form-field" type="text" placeholder="Ваше имя" required>
+        <input class="header__form-field" type="text" id="phone" placeholder="Ваш телефон" required>
+        <input class="header__form-field" type="email" placeholder="Ваш email" required>
+        <label class="form__politics">
+          <input type="checkbox" checked="checked" id="checkbox-modal">
+          <span class="form__politics-descr">
+            Я согласен на <a class="form__politics-link" href="#" target="_blank">
+              обработку персональных данных
+            </a>
+          </span>
+        </label>
+        <button class="header__form-btn"  id="modal__form-send" type="submit">Отправить</button>
       </form>
       <span class="modal-close">
         <svg>

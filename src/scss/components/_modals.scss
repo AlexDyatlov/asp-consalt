@@ -1,13 +1,13 @@
 .modal{
   position: relative;
   display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   padding: 50px 60px;
   width: 500px;
-  height: 480px;
+  min-height: 480px;
   background-color: var(--color-white);
-  display: none;
   &-overlay{
     position: fixed;
     left: 0;
@@ -66,16 +66,19 @@
   }
 }
 .header__form{
-  input{
+  &-field{
     margin-bottom: 18px;
     outline: transparent;
     border: none;
     border-bottom: 1px solid var(--color-black);
     padding: 0 10px;
     width: 100%;
+    &:nth-last-child(3){
+      margin-bottom: 25px;
+    }
   }
   button{
-    margin-top: 40px;
+    margin-top: 30px;
     border-radius: 4px;
     width: 100%;
     height: 48px;
@@ -84,6 +87,25 @@
     letter-spacing: 1.8px;
     color: var(--color-white);
     background-color: var(--color-blue);
+    transition: background-color 0.4s;
     @include f700;
+    &:hover{
+      background-color: var(--color-dark-blue);
+      transition: background-color 0.4s;
+    }
+    &:disabled{
+      background-color: var(--color-silver);
+      transition: background-color 0.4s;
+      cursor: not-allowed;
+    }
+  }
+}
+.form__politics{
+  cursor: pointer;
+  &-link{
+    color: var(--color-blue);
+    &:hover{
+      text-decoration: underline;
+    }
   }
 }

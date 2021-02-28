@@ -1,0 +1,35 @@
+.breadcrumbs{
+  background-color: var(--color-wild-sand);
+}
+.breadcrumbs__list{
+  padding: 15px 0;
+  &-item{
+    position: relative;
+    display: inline-block;
+    &:not(:first-child){
+      margin-left: 35px;
+      &::before{
+        content: "";
+        position: absolute;
+        left: -22px;
+        top: 9px;
+        width: 5px;
+        height: 5px;
+        background-color: var(--color-emperor);
+      }
+    }
+  }
+  &-link{
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--color-dovgray);
+    transition: color 0.3s;
+    &:hover{
+      color: var(--color-black);
+      transition: color 0.3s;
+    }
+  }
+  &--current{
+    color: var(--color-black);
+  }
+}

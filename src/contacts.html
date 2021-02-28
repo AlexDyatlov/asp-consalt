@@ -13,12 +13,17 @@
 </head>
 <body>
 	<div class="site-container">
-		@include('partials/header.html')
+		@include('partials/header-contacts.html')
     <main class="main">
-      @include('partials/services.html')
-      @include('partials/about.html')
-      @include('partials/advantages.html')
-      @include('partials/clients.html')
+      <div class="breadcrumbs">
+        <div class="container">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__list-item"><a class="breadcrumbs__list-link" href="index.html">Главная</a></li>
+            <li class="breadcrumbs__list-item"><span class="breadcrumbs__list-link breadcrumbs__list--current">Контакты</span></li>
+          </ul>
+        </div>
+      </div>
+    @include('partials/contacts.html')
 		</main>
     @include('partials/modals.html')
     @include('partials/footer.html')

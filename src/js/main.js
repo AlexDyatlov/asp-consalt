@@ -3,7 +3,11 @@ const btns = document.querySelectorAll('.btn'),
       closeBtn = document.querySelectorAll('.modal-close'),
       modals = document.querySelectorAll('.modal'),
       element = document.getElementById('phone'),
-      maskOptions = {mask: '+{7}(000)000-00-00'};
+      maskOptions = {mask: '+{7}(000)000-00-00'},
+      chBox = document.getElementById('checkbox'),
+      sendForm = document.getElementById('form-send'),
+      chBoxModal = document.getElementById('checkbox-modal'),
+      modalFormSend = document.getElementById('modal__form-send');
 
 
 
@@ -59,3 +63,20 @@ const clientsSlider = new Swiper('.clients-slider', {
     delay: 3000,
   },
 });
+
+// start checkbox-disabled
+chBox.onchange = function(){
+  if(chBox.checked){
+    sendForm.disabled = false;
+  } else{
+    sendForm.disabled = true;
+  }
+};
+
+chBoxModal.onchange = function(){
+  if(chBoxModal.checked){
+    modalFormSend.disabled = false;
+  } else{
+    modalFormSend.disabled = true;
+  }
+};
