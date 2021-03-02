@@ -64,15 +64,6 @@ body {
 .visually-hidden {
   @include visually-hidden;
 }
-
-.for-mobile {
-  display: none;
-
-  @include mobile {
-    display: block;
-  }
-}
-
 .error {
   border: 2px #ff4019 solid !important; // stylelint-disable-line declaration-no-important
 }

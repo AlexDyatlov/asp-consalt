@@ -3,6 +3,7 @@
   background-color: var(--color-dark-blue);
   &__top{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding: 60px 0 45px;
   }

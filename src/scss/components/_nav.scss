@@ -43,8 +43,7 @@
 }
 .drop__down-list{
   position: absolute;
-  z-index: 10;
-  display: none;
+  z-index: -1;
   overflow: hidden;
   margin-top: 1px;
   border: 1px solid rgb(232, 235, 241);
@@ -88,10 +87,10 @@
   &:hover{
     & .drop__down-list{
       z-index: 10;
-      display: block;
       overflow: visible;
       height: auto;
       opacity: 1;
+      transition: all 0.3s;
     }
     & > a{
       position: relative;
