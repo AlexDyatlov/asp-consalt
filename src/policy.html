@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#111111">
+  <title>asp-consalt</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <div class="site-container">
+    @include('partials/header-policy.html')
+    <main class="main">
+      <div class="breadcrumbs">
+        <div class="container">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__list-item"><a class="breadcrumbs__list-link" href="index.html">Главная</a></li>
+            <li class="breadcrumbs__list-item">
+              <span class="breadcrumbs__list-link breadcrumbs__list--current">Пользовательское соглашение</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <section class="policy">
+        <div class="container">
+          <h1 class="policy__title title">
+            Пользовательское соглашение
+          </h1>
+          <p class="policy__text">
+            Я, субъект персональных данных, в соответствии с Федеральным законом от 27.07.2006 года № 152-ФЗ «О
+            персональных данных» предоставляю согласие на обработку персональных данных, указанных мной в форме на сайте
+            в сети «Интернет», владельцем которого является ООО "АСП-Консалт" (далее - Оператор). Персональные данные -
+            любая информация, относящаяся к определенному или определяемому на основании такой информации физическому
+            лицу. Настоящее Согласие выдано мною на обработку следующих персональных данных:
+          </p>
+          <ol class="policy__list ol__list">
+            <li class="policy__list-item ol__list-item">Имя;</li>
+            <li class="policy__list-item ol__list-item">Телефон;</li>
+            <li class="policy__list-item ol__list-item">E-mail;</li>
+            <li class="policy__list-item ol__list-item">Организация;</li>
+            <li class="policy__list-item ol__list-item">Комментарий.</li>
+          </ol>
+          <p class="policy__text">
+            Согласие дано Оператору для совершения следующих действий с моими персональными данными с использованием
+            средств автоматизации и/или без использования таких средств: сбор, систематизация, накопление, хранение,
+            уточнение (обновление, изменение), использование, обезличивание, а также осуществление любых иных действий,
+            предусмотренных действующим законодательством РФ как неавтоматизированными, так и автоматизированными
+            способами.
+          </p>
+          <p class="policy__text">
+            Данное согласие дается Оператору для обработки моих персональных данных в следующих целях:
+          </p>
+          <ol class="policy__list ol__list">
+            <li class="policy__list-item ol__list-item">
+              предоставление мне услуг/работ;
+            </li>
+            <li class="policy__list-item ol__list-item">
+              направление в мой адрес уведомлений, касающихся предоставляемых услуг/работ;
+            </li>
+            <li class="policy__list-item ol__list-item">
+              подготовка и направление ответов на мои запросы;
+            </li>
+            <li class="policy__list-item ol__list-item">
+              направление в мой адрес информации, в том числе рекламной, о мероприятиях/товарах/услугах/работах
+              Оператора.
+            </li>
+          </ol>
+          <p class="policy__text">
+            Настоящее согласие действует до момента его отзыва путем направления соответствующего уведомления на
+            электронный адрес info@asp-consalt.ru. В случае отзыва мною согласия на обработку персональных данных
+            Оператор вправе продолжить обработку персональных данных без моего согласия при наличии оснований, указанных
+            в пунктах 2 – 11 части 1 статьи 6, части 2 статьи 10 и части 2 статьи 11 Федерального закона №152-ФЗ «О
+            персональных данных» от 27.06.2006 г.
+          </p>
+        </div>
+      </section>
+    </main>
+    @include('partials/modals.html')
+    @include('partials/footer.html')
+  </div>
+  <script src="js/vendor.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,18 +1,4 @@
 .contacts{
-  &__title{
-    position: relative;
-    padding-left: 100px;
-    text-align: left;
-    &::before{
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 17px;
-      width: 75px;
-      height: 4px;
-      background-color: var(--color-blue);
-    }
-  }
   &__map{
     min-height: 420px;
   }

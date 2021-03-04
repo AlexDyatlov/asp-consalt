@@ -1,9 +1,9 @@
 const servicesSlider = new Swiper('.services-slider', {
-  loop: true,
   slidesPerView: 1,
   pagination: {
-    el: '.service-btn',
+    el: '.swiper-pagination',
     type: 'bullets',
+    dynamicBullets: true,
     clickable: true
   },
 });
