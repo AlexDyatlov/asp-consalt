@@ -17,20 +17,8 @@
     line-height: 30px;
   }
   &__link{
-    border: 1px solid var(--color-blue);
-    border-radius: 4px;
-    padding: 8px 45px;
     letter-spacing: 1.2px;
     text-transform: uppercase;
-    color: var(--color-white);
-    background: var(--color-blue);
-    transition: color, background 0.3s;
-    &:hover{
-      color: var(--color-black);
-      background: transparent;
-      transition: color, background 0.3s;
-      cursor: pointer;
-    }
   }
 }
 .info__item{

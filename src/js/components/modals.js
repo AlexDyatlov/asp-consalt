@@ -1,4 +1,4 @@
-const btns = document.querySelectorAll('.btn'),
+const btns = document.querySelectorAll('.modal-btn'),
       modalOverlay = document.querySelector('.modal-overlay'),
       closeBtn = document.querySelectorAll('.modal-close'),
       modals = document.querySelectorAll('.modal');

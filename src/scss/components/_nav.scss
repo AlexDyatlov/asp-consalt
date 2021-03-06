@@ -84,7 +84,7 @@
 }
 .menu__list-item.drop__down{
   &:hover{
-    & .drop__down-list{
+    .drop__down-list{
       z-index: 10;
       overflow: visible;
       height: auto;

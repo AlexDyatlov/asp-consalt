@@ -1,11 +1,12 @@
 .career__item{
-  margin-bottom: 40px;
   border: 1px solid var(--color-silver);
   &-title{
     position: relative;
+    display: block;
     padding: 30px;
     font-size: 18px;
     line-height: 24px;
+    text-align: left;
     transition: background-color 0.3s;
     cursor: pointer;
     user-select: none;
@@ -25,6 +26,9 @@
       transition: background-color 0.3s;
     }
   }
+  &:not(:last-child){
+    margin-bottom: 40px;
+  }
 }
 .career__content{
   padding: 30px;
@@ -42,45 +46,28 @@
     }
   }
 }
-.career__info{
-  margin-bottom: 10px;
-  @include f700;
-  &-list{
-    padding-left: 35px;
-    &:not(:last-child){
-      margin-bottom: 30px;
-    }
-  }
-  &-item{
-    position: relative;
-    &::before{
-      content: "";
-      position: absolute;
-      left: -31px;
-      top: -1px;
-      width: 24px;
-      height: 24px;
-      background: center/cover no-repeat url("../img/check.svg");
-    }
-    &:not(:last-child){
-      margin-bottom: 8px;
-    }
-  }
+.accordion__control{
+  padding: 0;
+  width: 100%;
 }
-.accordion-item--active .accordion-item__toggle{
+.accordion__content{
+  overflow: hidden;
+  padding: 0 20px;
+  max-height: 0;
+  box-sizing: content-box;
+  opacity: 0;
+  transition: all 0.3s ease-out;
+  will-change: max-height;
+}
+.open .accordion__control{
   background-color: var(--color-wild-sand);
-  &.career__item-title{
+  .career__item-title{
     &::before{
       transform: rotate(180deg);
     }
   }
 }
-.accordion-item--active .accordion-item__content{
-  display: block;
-}
-.accordion-item__toggle{
-  display: block;
-}
-.accordion-item__content{
-  display: none;
+.open .accordion__content{
+  padding: 20px;
+  opacity: 1;
 }

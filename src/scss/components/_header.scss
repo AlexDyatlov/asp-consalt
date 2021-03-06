@@ -8,14 +8,7 @@
   }
 }
 .logo{
-  width: 200px;
-  &-descr{
-    padding-left: 30px;
-  }
-  svg{
-    width: 41px;
-    height: 36px;
-  }
+
 }
 .header__box{
   display: flex;
@@ -40,7 +33,13 @@
     border: 1px solid var(--color-blue);
     border-radius: 3px;
     padding: 6px 15px;
+    transition: color, background-color 0.3s;
     cursor: pointer;
+    &:hover{
+      color: var(--color-white);
+      background-color: var(--color-blue);
+      transition: color, background-color 0.3s;
+    }
   }
   &-phone:hover,
   &-mail:hover{

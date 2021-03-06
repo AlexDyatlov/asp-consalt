@@ -2,6 +2,16 @@
   margin-bottom: 70px;
   &-slider{
     position: relative;
+    &:hover{
+      .swiper-button-next{
+        right: 40px;
+        transition: all 0.4s ease-in-out;
+      }
+      .swiper-button-prev{
+        left: 40px;
+        transition: all 0.4s ease-in-out;
+      }
+    }
   }
   &-item{
     min-height: 500px;
@@ -19,6 +29,7 @@
 .services__content{
   position: relative;
   padding-top: 120px;
+  padding-left: 70px;
   color: var(--color-white);
   &-name{
     margin-bottom: 10px;
@@ -41,13 +52,40 @@
 .swiper-pagination{
   .swiper-pagination-bullet{
     margin: 0 14px;
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
     background-color: var(--color-blue);
-    opacity: 0.7;
+    opacity: 1;
     &-active{
+      width: 12px;
+      height: 12px;
       background-color: var(--color-white);
       opacity: 1;
     }
   }
+}
+.swiper-button{
+  border-radius: 4px;
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-white);
+  transition: all 0.4s ease-in-out;
+  &::after{
+    font-size: 17px;
+    color: var(--color-black);
+  }
+  &:hover{
+    background-color: var(--color-blue);
+    transition: background-color 0.3s;
+    &::after{
+      color: var(--color-white);
+      transition: color 0.3s;
+    }
+  }
+}
+.swiper-button-next{
+  right: -60px;
+}
+.swiper-button-prev{
+  left: -60px;
 }

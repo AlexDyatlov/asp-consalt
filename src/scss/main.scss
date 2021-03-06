@@ -10,14 +10,7 @@
   --color-dovgray: #666;
   --color-emperor: #555;
   --color-wild-sand: #f5f5f5;
-}// CUSTOM COMPONENTS STYLES
-// .burger {
-//   --burger-width: 40px;
-//   --burger-height: 20px;
-//   --burger-line-height: 2px;
-
-//   @include burger;
-// }
+}
 @import "vars";
 @import "./components/header";
 @import "./components/nav";
@@ -29,8 +22,10 @@
 @import "./components/footer";
 @import "./components/breadcrumbs";
 @import "./components/contacts";
-@import "./components/company";
+@import "./components/content";
 @import "./components/policy";
 @import "./components/certificates";
 @import "./components/career";
+@import "./components/experience";
+@import "./components/reviews";
 @import "media";
