@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="theme-color" content="#111111">
+  <title>asp-consalt</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/vendor.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<div class="site-container">
+		@include('partials/header-services.html')
+    <main class="main">
+      <div class="breadcrumbs">
+        <div class="container">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__list-item"><a class="breadcrumbs__list-link" href="index.html">Главная</a></li>
+            <li class="breadcrumbs__list-item"><a class="breadcrumbs__list-link" href="">Услуги</a></li>
+            <li class="breadcrumbs__list-item"><a class="breadcrumbs__list-link" href="resheniya-1с-dlya-obrazovaniya.html">Решения “1С” для образования</a></li>
+            <li class="breadcrumbs__list-item"><span class="breadcrumbs__list-link breadcrumbs__list--current">
+              1С:Дошкольное учреждение
+            </span></li>
+          </ul>
+        </div>
+      </div>
+      @include('partials/1c-doshkolnoe-uchrezhdenie.html')
+		</main>
+    @include('partials/modals.html')
+    @include('partials/footer.html')
+  </div>
+  <script src="js/vendor.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

@@ -8,7 +8,12 @@
   }
 }
 .logo{
-
+  line-height: 0;
+  img{
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+  }
 }
 .header__box{
   display: flex;
