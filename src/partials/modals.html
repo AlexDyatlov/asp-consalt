@@ -1,29 +1,55 @@
 <div class="modals">
   <div class="modal-overlay">
-    <div class="modal header__modal" data-target="one">
-      <div class="header__modal-title">У вас есть вопрос?</div>
-      <p class="header__modal-descr">
+    <div class="modal modal__info" data-target="one">
+      <div class="modal__info-title">У вас есть вопрос?</div>
+      <p class="modal__info-descr">
         Оставьте свои контакты, мы свяжемся с Вами в ближайшее время.
       </p>
-      <form class="header__form">
-        <input class="header__form-field" type="text" placeholder="Ваше имя" required>
-        <input class="header__form-field" type="text" id="phone" placeholder="Ваш телефон" required>
-        <input class="header__form-field" type="email" placeholder="Ваш E-mail" required>
+      <form class="modal__form">
+        <input class="modal__form-field" type="text" placeholder="Ваше имя" required>
+        <input class="modal__form-field" type="text" id="phone" placeholder="Ваш телефон" required>
+        <input class="modal__form-field" type="email" placeholder="Ваш E-mail" required>
         <label class="form__politics">
-          <input type="checkbox" checked="checked" id="checkbox-modal">
+          <input type="checkbox" checked="checked" id="checkbox-header">
           <span class="form__politics-descr">
             Я согласен на <a class="form__politics-link" href="policy.html" target="_blank">
               обработку персональных данных
             </a>
           </span>
         </label>
-        <button class="header__form-btn"  id="modal__form-send" type="submit">Отправить</button>
+        <button class="modal__form-btn"  id="header__form-send" type="submit">Отправить</button>
       </form>
-      <span class="modal-close">
+      <button class="modal-close">
         <svg>
           <use xlink:href="img/sprite.svg#close"></use>
         </svg>
-      </span>
+      </button>
+    </div>
+    <div class="modal modal__info" data-target="two">
+      <div class="modal__info-title">Оставить заявку</div>
+      <p class="modal__info-descr">
+        Оставьте свои контакты, мы свяжемся с Вами в ближайшее время.
+      </p>
+      <form class="modal__form">
+        <input class="modal__form-field" type="text" placeholder="Ваше имя" required>
+        <input class="modal__form-field" type="email" placeholder="Ваш E-mail" required>
+        <input class="modal__form-field" type="text" placeholder="Ваша организация" required>
+        <input class="modal__form-field" type="text" placeholder="Наименование продукта" required>
+        <label class="form__politics">
+          <input type="checkbox" checked="checked" id="checkbox-price">
+          <span class="form__politics-descr">
+            Я согласен на <a class="form__politics-link" href="policy.html" target="_blank">
+              обработку персональных данных
+            </a>
+          </span>
+        </label>
+        <button class="modal__form-btn" id="price__form-send" type="submit">Отправить</button>
+      </form>
+      <button class="modal-close">
+        <svg>
+          <use xlink:href="img/sprite.svg#close"></use>
+        </svg>
+      </button>
     </div>
   </div>
 </div>

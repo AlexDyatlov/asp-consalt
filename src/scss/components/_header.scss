@@ -92,3 +92,9 @@
 .menu__list-item .drop__down-list li{
   display: block;
 }
+.tabs__content{
+  display: none;
+  &--active{
+    display: block;
+  }
+}

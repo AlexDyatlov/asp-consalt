@@ -52,7 +52,7 @@
     display: block;
   }
 }
-.header__modal{
+.modal__info{
   &-title{
     margin-bottom: 15px;
     font-size: 30px;
@@ -65,7 +65,7 @@
     text-align: center;
   }
 }
-.header__form{
+.modal__form{
   &-field{
     margin-bottom: 18px;
     outline: transparent;
