@@ -9,8 +9,14 @@
   }
 }
 .footer__col{
+  width: 100%;
+  &-company{
+    max-width: 236px;
+  }
+  &-services{
+    max-width: 340px;
+  }
   &-contacts{
-    width: 100%;
     max-width: 300px;
   }
   &-title{
@@ -52,21 +58,8 @@
 .footer__col-contacts .footer__col-location svg{
   top: 2px;
 }
-.footer__bottom{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.footer__copy{
   border-top: 1px solid var(--color-emperor);
   padding: 30px 0;
-  color: var(--color-silver);
-  &-copy{
-    color: var(--color-white);
-  }
-  &-link{
-    color: var(--color-dovgray);
-    &:hover,
-    &:focus{
-      color: var(--color-white);
-    }
-  }
+  color: var(--color-white);
 }

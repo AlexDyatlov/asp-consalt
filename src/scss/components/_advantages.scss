@@ -6,17 +6,18 @@
   &__inner{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
+    margin-left: -30px;
   }
 }
 .card{
+  flex-basis: calc(33.3333% - 30px);
+  margin-bottom: 30px;
+  margin-left: 30px;
   width: 375px;
   min-height: 280px;
   perspective: 1000px;
   transform-style: preserve-3d;
-  &:not(:nth-last-child(-n+3)){
-    margin-bottom: 30px;
-  }
   &:hover{
     .card__flip-front{
       transform: rotateY(-180deg);

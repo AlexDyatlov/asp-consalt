@@ -7,17 +7,18 @@
     margin-bottom: 7px;
     width: 21%;
     .tabs__btn--active{
-      background-color: #e2e6ea;
+      background-color: var(--color-athens-gray);
     }
   }
   &-btn{
     border-radius: 25px 0;
-    padding: 10px 15px;
+    padding: 10px 20px;
+    width: 100%;
     background-color: var(--color-wild-sand);
     transition: background-color 0.3s;
     &:hover,
     &:focus{
-      background-color: #e2e6ea;
+      background-color: var(--color-athens-gray);
       transition: background-color 0.3s;
     }
   }
@@ -34,7 +35,8 @@
     background-color: #ffd300;
   }
   &__price{
-    width: 15%;
+    width: 130px;
+    max-width: 100%;
   }
   th,
   td{

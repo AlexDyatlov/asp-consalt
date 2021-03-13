@@ -8,8 +8,6 @@
     @include f700;
   }
   &-descr{
-    font-size: 14px;
-    line-height: 20px;
     color: #999;
   }
   &-text:not(:last-child){
@@ -27,6 +25,6 @@
     margin-right: 30px;
     width: 70px;
     height: 70px;
-    fill: var(--color-wild-sand);
+    fill: var(--color-athens-gray);
   }
 }

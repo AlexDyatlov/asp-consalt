@@ -6,10 +6,6 @@
   border: 1px solid var(--color-silver);
   padding: 25px 25px 40px;
   transition: border-color 0.3s;
-  &-title{
-    font-size: 30px;
-    line-height: 36px;
-  }
   &-img{
     margin-right: 30px;
     max-width: 142px;
@@ -27,8 +23,8 @@
 .certificates__info{
   &-title{
     margin-bottom: 10px;
-    font-size: 18px;
-    line-height: 24px;
+    font-size: 17px;
+    line-height: 23px;
   }
 }
 .programmers-slider,

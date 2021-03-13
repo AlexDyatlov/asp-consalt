@@ -10,11 +10,13 @@
   align-items: center;
   justify-content: center;
   min-height: 100px;
+  max-width: 260px;
   opacity: 0.5;
   transition: opacity 0.3s;
   img{
     display: block;
     height: auto;
+    object-fit: cover;
   }
   &:hover{
     opacity: 1;

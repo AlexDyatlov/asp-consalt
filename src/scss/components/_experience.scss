@@ -21,19 +21,19 @@
   max-width: 635px;
   &-title{
     margin-bottom: 20px;
-    font-size: 24px;
-    line-height: 30px;
-    @include f400;
+    font-size: 22px;
+    line-height: 28px;
+    @include f700;
   }
   &-descr{
     margin-bottom: 20px;
-    font-size: 18px;
-    line-height: 24px;
+    font-size: 16px;
+    line-height: 22px;
   }
   &-link{
     padding: 12px 25px;
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 12px;
+    line-height: 18px;
     letter-spacing: 1px;
     text-transform: uppercase;
     @include f700;
@@ -62,8 +62,6 @@
     display: inline-block;
     border-radius: 42px;
     padding: 7px 12px;
-    font-size: 14px;
-    line-height: 20px;
     color: var(--color-white);
     background-color: var(--color-blue);
     user-select: none;
