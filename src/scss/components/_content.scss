@@ -1,9 +1,9 @@
 .content{
   display: flex;
+  justify-content: space-between;
   &__main{
     margin-bottom: 100px;
-    width: 100%;
-    max-width: 890px;
+    width: 74.17%;
     &-top{
       display: flex;
       align-items: center;
@@ -12,9 +12,7 @@
     }
   }
   &__aside{
-    margin-right: 60px;
-    width: 100%;
-    max-width: 250px;
+    width: 20.84%;
   }
 }
 .widget{

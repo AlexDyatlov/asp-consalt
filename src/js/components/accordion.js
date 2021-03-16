@@ -21,3 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	});
 });
+
+AOS.init({
+  once: true,
+  delay: 400
+});

@@ -51,8 +51,10 @@
   }
   &-link{
     margin-top: 30px;
+    border-radius: 4px;
     padding: 10px 25px;
     text-transform: uppercase;
+    color: var(--color-white);
     background-color: var(--color-blue);
   }
 }
@@ -95,4 +97,11 @@
 }
 .swiper-button-prev{
   left: -60px;
+}
+.services-slider .swiper-slide .services__content{
+  opacity: 0;
+}
+.services-slider .swiper-slide-active .services__content{
+  opacity: 1;
+  transition: opacity 1s ease 0.4s;
 }

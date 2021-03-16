@@ -1,13 +1,11 @@
 <section class="contacts">
   <div class="container">
-    <h1 class="contacts__title title">
+    <h1 class="contacts__title title" data-aos="fade-right" data-aos-duration="800">
       Контакты
     </h1>
   </div>
   <div class="contacts__map">
-    <script type="text/javascript" charset="utf-8" async
-      src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A1d46dfa1604dce54a2eed513ab284fad14bf90328a3b3e653035fcd592c48ca8&amp;width=100%25&amp;height=420&amp;lang=ru_RU&amp;scroll=false">
-      </script>
+    <script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A1d46dfa1604dce54a2eed513ab284fad14bf90328a3b3e653035fcd592c48ca8&amp;width=100%25&amp;height=420&amp;lang=ru_RU&amp;scroll=false"></script>
   </div>
   <div class="container">
     <div class="contacts__box">
@@ -37,21 +35,35 @@
         <img src="img/contacts.jpg" alt="Работа за ноутбуком">
       </div>
       <div class="contcats__form">
-        <h2 class="contcats__form-title">Остались вопросы?</h2>
-        <form>
-          <input class="contcats__form-field" type="text" name="" placeholder="Ваше имя" required>
-          <input class="contcats__form-field" type="email" name="" placeholder="Ваш E-mail" required>
-          <input class="contcats__form-field" type="text" name="" placeholder="Ваша организация" required>
-          <textarea class="contcats__form-field" name="" placeholder="Сообщение" required></textarea>
+        <h2 class="contcats__form-title" data-aos="flip-up" data-aos-duration="600">Остались вопросы?</h2>
+        <form class="form" method="POST">
+          <input type="hidden" name="form_subject" value="Форма с страницы контактов">
+          <input type="hidden" name="admin_email[]" value="alexdyatlov.web@gmail.com">
+          <label>
+            <span class="visually-hidden">Имя</span>
+            <input class="contcats__form-field" type="text" name="Имя" placeholder="Ваше имя" data-validate-field="name">
+          </label>
+          <label>
+            <span class="visually-hidden">Почта</span>
+            <input class="contcats__form-field" type="email" name="e-mail" placeholder="Ваш E-mail" data-validate-field="email">
+          </label>
+          <label>
+            <span class="visually-hidden">Ваша организация</span>
+            <input class="contcats__form-field" type="text" name="Компания" placeholder="Ваша организация">
+          </label>
+          <label>
+            <span class="visually-hidden">Сообщение</span>
+            <textarea class="contcats__form-field" name="Сообщение" placeholder="Сообщение"></textarea>
+          </label>
           <label class="form__politics">
-            <input class="checkbox" type="checkbox" checked="checked" id="checkbox">
+            <input class="checkbox" type="checkbox" checked="checked">
             <span class="form__politics-descr">
               Я согласен на <a class="form__politics-link" href="policy.html" target="_blank">
                 обработку персональных данных
               </a>
             </span>
           </label>
-          <button class="contcats__form-btn" id="form-send" type="submit">Отправить</button>
+          <button class="contcats__form-btn" type="submit">Отправить</button>
         </form>
       </div>
     </div>

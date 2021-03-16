@@ -115,3 +115,11 @@
     resize: none;
   }
 }
+.js-validate-error{
+  &-field{
+    margin-bottom: 5px;
+  }
+  &-label{
+    margin-bottom: 15px;
+  }
+}

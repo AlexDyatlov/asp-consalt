@@ -96,3 +96,21 @@
     display: block;
   }
 }
+.to-top{
+  position: fixed;
+  right: 40px;
+  bottom: 80px;
+  z-index: 99;
+  display: none;
+  border-radius: 2px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: #fff;
+  background-color: var(--color-blue);
+  cursor: pointer;
+  &-show{
+    display: block;
+  }
+}

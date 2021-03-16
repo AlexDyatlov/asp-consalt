@@ -11,17 +11,6 @@ $form_subject = trim($_POST["form_subject"]);
 $mail = new PHPMailer;
 $mail->CharSet = 'UTF-8';
 
-// Настройки SMTP
-// $mail->isSMTP();
-// $mail->SMTPAuth = true;
-// $mail->SMTPDebug = 0;
- 
-// $mail->Host = 'ssl://smtp.gmail.com';
-// $mail->Port = 465;
-// $mail->Username = 'Логин';
-// $mail->Password = 'Пароль';
-
-
 $c = true;
 $message = '';
 foreach ( $_POST as $key => $value ) {
@@ -47,15 +36,15 @@ $message = "<table style='width: 50%;'>$message</table>";
 
 
 // От кого
-$mail->setFrom('adm@' . $_SERVER['HTTP_HOST'], 'Your best site');
- 
+$mail->setFrom('adm@' . $_SERVER['HTTP_HOST'], 'АСП-Консалт');
+
 // Кому
 foreach ( $admin_email as $key => $value ) {
 	$mail->addAddress($value);
 }
 // Тема письма
 $mail->Subject = $form_subject;
- 
+
 // Тело письма
 $body = $message;
 // $mail->isHTML(true);  это если прям верстка
