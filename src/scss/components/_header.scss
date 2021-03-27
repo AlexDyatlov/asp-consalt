@@ -8,6 +8,7 @@
   }
 }
 .logo{
+  width: 200px;
   line-height: 0;
   img{
     width: 100%;
@@ -20,7 +21,7 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  max-width: 735px;
+  max-width: 740px;
   &-info{
     border-right: 1px solid var(--color-grey);
     padding-right: 15px;
@@ -30,24 +31,24 @@
     display: block;
     margin-top: 2px;
     font-size: 16px;
+    color: rgba(0, 0, 0, 0.54);
     @include f400;
   }
   &-btn{
-    border: 1px solid var(--color-blue);
+    border: 3px solid var(--color-main);
     border-radius: 3px;
-    padding: 6px 15px;
-    transition: color, background-color 0.3s;
+    padding: 8px 15px;
+    transition: background-color 0.3s;
     cursor: pointer;
     &:hover{
-      color: var(--color-white);
-      background-color: var(--color-blue);
-      transition: color, background-color 0.3s;
+      background-color: var(--color-main);
+      transition: background-color 0.3s;
     }
   }
   &-phone:hover,
   &-mail:hover{
     .header__box-descr{
-      color: var(--color-blue);
+      color: var(--color-black);
     }
   }
 }
@@ -61,7 +62,7 @@
   user-select: none;
   &__line{
     fill: none;
-    stroke: var(--color-blue);
+    stroke: var(--color-black);
     stroke-linecap: round;
     stroke-width: 5.5;
     transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
@@ -105,12 +106,17 @@
   border-radius: 2px;
   width: 30px;
   height: 30px;
+  font-weight: 700;
   line-height: 30px;
   text-align: center;
-  color: #fff;
-  background-color: var(--color-blue);
+  background-color: var(--color-main);
+  transition: background-color 0.3s;
   cursor: pointer;
   &-show{
     display: block;
+  }
+  &:hover{
+    background-color: var(--color-dark-main);
+    transition: background-color 0.3s;
   }
 }

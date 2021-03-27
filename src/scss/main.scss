@@ -1,11 +1,9 @@
 :root{
   --color-black: #000;
-  --color-shark: #1e1e25;
+  --color-main: #ffdd2d;
+  --color-dark-main: #fcc521;
   --color-white: #fff;
-  --color-white2: rgb(252, 252, 252);
   --color-grey: #eee;
-  --color-blue: #3b55e6;
-  --color-dark-blue: #172f53;
   --color-silver: #acb5bd;
   --color-dovgray: #666;
   --color-emperor: #555;
@@ -30,4 +28,5 @@
 @import "./components/experience";
 @import "./components/reviews";
 @import "./components/price";
+@import "./components/error";
 @import "media";

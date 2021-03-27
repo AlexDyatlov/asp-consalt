@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="manifest" href="/manifest.webmanifest">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="theme-color" content="#111111">
+  <title>404 — Страница не найдена</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/vendor.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<div class="site-container">
+		@include('partials/header.html')
+    <main class="main">
+      <section class="error">
+        <div class="container">
+          <div class="error__page">
+            <span class="error__page-code">
+              Ошибка 404
+            </span>
+            <h1 class="error__page-title">
+              Извините! Страница, которую Вы ищете, не может быть найдена
+            </h1>
+            <a class="btn error__page-home" href="index.html">Перейти на главную</a>
+            <img class="error__page-img" src="img/404.png" alt="Страница 404">
+          </div>
+        </div>
+      </section>
+		</main>
+    @include('partials/modals.html')
+    @include('partials/footer.html')
+  </div>
+  <script src="js/vendor.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

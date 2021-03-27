@@ -32,7 +32,7 @@
     width: 20%;
   }
   &__top{
-    background-color: #ffd300;
+    background-color: var(--color-main);
   }
   &__price{
     width: 130px;
@@ -51,7 +51,7 @@
     display: block;
     &:hover,
     &:focus{
-      color: var(--color-blue);
+      font-weight: 700;
     }
   }
 }

@@ -85,15 +85,15 @@
     font-size: 18px;
     line-height: 24px;
     letter-spacing: 1.8px;
-    color: var(--color-white);
-    background-color: var(--color-blue);
+    background-color: var(--color-main);
     transition: background-color 0.4s;
     @include f700;
     &:hover{
-      background-color: var(--color-dark-blue);
+      background-color: var(--color-dark-main);
       transition: background-color 0.4s;
     }
     &:disabled{
+      color: var(--color-black);
       background-color: var(--color-silver);
       transition: background-color 0.4s;
       cursor: not-allowed;
@@ -102,12 +102,43 @@
 }
 .form__politics{
   cursor: pointer;
+  input{
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+  &-descr{
+    user-select: none;
+    &::before{
+      content: "";
+      display: inline-block;
+      vertical-align: -1px;
+      margin-right: 10px;
+      border: 1px solid var(--color-silver);
+      border-radius: 0.25em;
+      width: 14px;
+      height: 14px;
+      background: center/70% no-repeat;
+    }
+  }
   &-link{
-    color: var(--color-blue);
+    color: #3b55e6;
     &:hover{
       text-decoration: underline;
     }
   }
+}
+.form__politics input:not(:disabled):not(:checked) + .form__politics-descr:hover::before{
+  border-color: var(--color-dark-main);
+}
+.form__politics input:focus + .form__politics-descr::before{
+  border-color: var(--color-dark-main);
+  box-shadow: 0 0 0 0.2rem rgba(252, 197, 33, 0.25);
+}
+.form__politics input:checked + .form__politics-descr::before{
+  border-color: var(--color-dark-main);
+  background-image: url("../img/checked.svg");
+  background-color: var(--color-dark-main);
 }
 .modal__form-field.js-validate-error-field{
   border: none !important;

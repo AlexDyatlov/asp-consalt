@@ -49,24 +49,13 @@ body{
   @include visually-hidden;
 }
 .main{
-  flex: 1 0 auto;
+  min-height: calc(100vh - 570px);
 }
 .title{
-  position: relative;
   margin: 30px 0;
-  padding-left: 100px;
   font-size: 31px;
   line-height: 37px;
   @include f700;
-  &::before{
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 17px;
-    width: 75px;
-    height: 4px;
-    background-color: var(--color-blue);
-  }
 }
 .main-title{
   margin-bottom: 30px;
@@ -81,16 +70,14 @@ button{
   cursor: pointer;
 }
 .btn{
-  border: 1px solid var(--color-blue);
   border-radius: 4px;
   padding: 8px 45px;
-  color: var(--color-white);
-  background: var(--color-blue);
-  transition: color, background 0.3s;
+  color: var(--color-black);
+  background: var(--color-main);
+  transition: background 0.3s;
   &:hover{
-    color: var(--color-black);
-    background: transparent;
-    transition: color, background 0.3s;
+    background: var(--color-dark-main);
+    transition: background 0.3s;
     cursor: pointer;
   }
 }

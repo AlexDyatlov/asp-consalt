@@ -3,6 +3,17 @@
   &-slider{
     position: relative;
     overflow-x: hidden;
+    padding-bottom: 30px;
+    .swiper-pagination{
+      bottom: 0;
+      .swiper-pagination-bullet{
+        background-color: var(--color-silver);
+        &-active{
+          position: relative;
+          background-color: transparent;
+        }
+      }
+    }
   }
 }
 .client__item{

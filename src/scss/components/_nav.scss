@@ -1,6 +1,6 @@
 .menu__list{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   &-item{
     &:not(:last-child){
       margin-right: 45px;
@@ -12,6 +12,7 @@
     padding: 16px 5px;
     font-size: 18px;
     line-height: 24px;
+    color: rgba(0, 0, 0, 0.54);
     transition: all 0.3s;
     user-select: none;
     &::before{
@@ -22,12 +23,12 @@
       bottom: -1px;
       width: 0;
       height: 4px;
-      background-color: var(--color-blue);
+      background-color: var(--color-main);
       transition: all 0.3s;
     }
     &:hover,
     &:focus{
-      color: var(--color-blue);
+      color: var(--color-black);
       &::before{
         left: 0;
         right: auto;
@@ -50,7 +51,7 @@
   padding: 10px 5px 0;
   width: 200px;
   box-shadow: 0 5px 0 0 rgba(42, 172, 200, 0.004);
-  background-color: var(--color-white2);
+  background-color: #fcfcfc;
   opacity: 0;
   transition: all 0.3s;
   li + li{
@@ -61,7 +62,7 @@
     transition: all 0.2s ease-in;
     &:hover{
       padding-left: 25px;
-      color: var(--color-blue);
+      color: var(--color-dark-main);
       transition: all 0.2s ease-in;
     }
   }
@@ -104,8 +105,11 @@
     }
   }
 }
-.menu__link--active::before{
-  left: 0;
-  right: auto;
-  width: 100%;
+.menu__link--active{
+  color: var(--color-black);
+  &::before{
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
 }

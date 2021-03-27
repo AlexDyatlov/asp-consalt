@@ -4,12 +4,12 @@ if (document.querySelector('.to-top')) {
     const coords = document.documentElement.clientHeight;
 
     if (scrolled > coords) {
-      goTopBtn.classList.add('to-top-show');
+      document.querySelector('.to-top').classList.add('to-top-show');
     }
     if (scrolled < coords) {
-      goTopBtn.classList.remove('to-top-show');
+      document.querySelector('.to-top').classList.remove('to-top-show');
     }
-  }
+  };
 
   function backToTop() {
     if (window.pageYOffset > 0) {
@@ -18,8 +18,6 @@ if (document.querySelector('.to-top')) {
     }
   };
 
-  const goTopBtn = document.querySelector('.to-top');
-
   window.addEventListener('scroll', trackScroll);
-  goTopBtn.addEventListener('click', backToTop);
+  document.querySelector('.to-top').addEventListener('click', backToTop);
 };

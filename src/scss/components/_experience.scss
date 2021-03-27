@@ -65,8 +65,7 @@
     margin-top: 10px;
     border-radius: 42px;
     padding: 7px 12px;
-    color: var(--color-white);
-    background-color: var(--color-blue);
+    background-color: var(--color-main);
     user-select: none;
     &:not(:last-child){
       position: relative;

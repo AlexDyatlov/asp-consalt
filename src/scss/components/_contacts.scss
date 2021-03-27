@@ -13,9 +13,10 @@
   position: absolute;
   left: 0;
   top: -390px;
+  border-radius: 8px;
   padding: 30px 20px 30px 65px;
   width: 100%;
-  background-color: var(--color-shark);
+  background-color: rgba(30, 30, 37, 0.66);
   &-item{
     position: relative;
     color: var(--color-white);
@@ -25,7 +26,7 @@
       top: -2px;
       width: 25px;
       height: 25px;
-      fill: #059191;
+      fill: var(--color-main);
     }
     &:not(:last-child){
       margin-bottom: 20px;
@@ -71,8 +72,8 @@
     width: 100%;
     transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     &:focus{
-      border-color: var(--color-blue);
-      box-shadow: 0 0 0 1px var(--color-blue);
+      border-color: var(--color-main);
+      box-shadow: 0 0 0 1px var(--color-main);
       transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     }
   }
@@ -82,8 +83,7 @@
     margin-top: 10px;
     border-radius: 4px;
     padding: 10px 45px 10px 30px;
-    color: var(--color-white);
-    background-color: var(--color-blue);
+    background-color: var(--color-main);
     transition: background-color 0.4s;
     &::before{
       content: "";
@@ -96,13 +96,17 @@
       opacity: 0;
       transition: opacity 0.3s;
     }
-    &:hover::before{
-      opacity: 1;
-      transition: opacity 0.3s;
+    &:hover{
+      transition: color 0.3s;
+      &::before{
+        opacity: 1;
+        transition: opacity 0.3s;
+      }
     }
     &:disabled{
+      color: var(--color-white);
       background-color: var(--color-silver);
-      transition: background-color 0.4s;
+      transition: color, background-color 0.4s;
       cursor: not-allowed;
       &::before{
         opacity: 0;

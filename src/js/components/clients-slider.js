@@ -4,6 +4,12 @@ const clientsSlider = new Swiper('.clients-slider', {
   autoplay: {
     delay: 3000,
   },
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+    dynamicBullets: true,
+    clickable: true
+  },
   breakpoints: {
     480: {
       slidesPerView: 2,
