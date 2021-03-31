@@ -1,6 +1,6 @@
 .footer{
   position: relative;
-  background-color: var(--color-wild-sand);
+  background-color: $color-wild-sand;
   &__top{
     display: flex;
     flex-wrap: wrap;
@@ -34,7 +34,7 @@
     transition: color 0.3s ease-out;
     &:hover,
     &:focus{
-      color: var(--color-black);
+      color: $color-black;
       transition: color 0.3s ease-out;
     }
   }
@@ -50,13 +50,13 @@
     top: -4px;
     width: 30px;
     height: 30px;
-    fill: var(--color-dark-main);
+    fill: $color-dark-main;
   }
 }
 .footer__col-contacts .footer__col-location svg{
   top: 2px;
 }
 .footer__copy{
-  border-top: 1px solid var(--color-silver);
+  border-top: 1px solid $color-silver;
   padding: 15px 0;
 }

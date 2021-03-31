@@ -23,12 +23,12 @@
       bottom: -1px;
       width: 0;
       height: 4px;
-      background-color: var(--color-main);
+      background-color: $color-main;
       transition: all 0.3s;
     }
     &:hover,
     &:focus{
-      color: var(--color-black);
+      color: $color-black;
       &::before{
         left: 0;
         right: auto;
@@ -55,14 +55,14 @@
   opacity: 0;
   transition: all 0.3s;
   li + li{
-    border-top: 0.5px solid var(--color-silver);
+    border-top: 0.5px solid $color-silver;
   }
   a{
     padding: 7px 10px;
     transition: all 0.2s ease-in;
     &:hover{
       padding-left: 25px;
-      color: var(--color-dark-main);
+      color: $color-dark-main;
       transition: all 0.2s ease-in;
     }
   }
@@ -106,7 +106,7 @@
   }
 }
 .menu__link--active{
-  color: var(--color-black);
+  color: $color-black;
   &::before{
     left: 0;
     right: auto;

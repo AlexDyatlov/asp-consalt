@@ -36,8 +36,8 @@ a{
 body{
   font-size: 14px;
   line-height: 20px;
-  color: var(--color-black);
-  background-color: var(--color-white);
+  color: $color-black;
+  background-color: $color-white;
   @include f400;
 }
 .site-container{
@@ -66,18 +66,18 @@ body{
 }
 button{
   border: none;
-  background: transparent;
+  background-color: transparent;
   cursor: pointer;
 }
 .btn{
   border-radius: 4px;
   padding: 8px 45px;
-  color: var(--color-black);
-  background: var(--color-main);
-  transition: background 0.3s;
+  color: $color-black;
+  background-color: $color-main;
+  transition: background-color 0.3s;
   &:hover{
-    background: var(--color-dark-main);
-    transition: background 0.3s;
+    background-color: $color-dark-main;
+    transition: background-color 0.3s;
     cursor: pointer;
   }
 }

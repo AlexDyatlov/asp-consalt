@@ -19,14 +19,14 @@
   background-color: rgba(30, 30, 37, 0.66);
   &-item{
     position: relative;
-    color: var(--color-white);
+    color: $color-white;
     svg{
       position: absolute;
       left: -44px;
       top: -2px;
       width: 25px;
       height: 25px;
-      fill: var(--color-main);
+      fill: $color-main;
     }
     &:not(:last-child){
       margin-bottom: 20px;
@@ -67,13 +67,13 @@
     display: block;
     margin-bottom: 15px;
     outline: transparent;
-    border: 1px solid var(--color-silver);
+    border: 1px solid $color-silver;
     padding: 12px 15px;
     width: 100%;
     transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     &:focus{
-      border-color: var(--color-main);
-      box-shadow: 0 0 0 1px var(--color-main);
+      border-color: $color-main;
+      box-shadow: 0 0 0 1px $color-main;
       transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     }
   }
@@ -83,7 +83,7 @@
     margin-top: 10px;
     border-radius: 4px;
     padding: 10px 45px 10px 30px;
-    background-color: var(--color-main);
+    background-color: $color-main;
     transition: background-color 0.4s;
     &::before{
       content: "";
@@ -104,8 +104,8 @@
       }
     }
     &:disabled{
-      color: var(--color-white);
-      background-color: var(--color-silver);
+      color: $color-white;
+      background-color: $color-silver;
       transition: color, background-color 0.4s;
       cursor: not-allowed;
       &::before{

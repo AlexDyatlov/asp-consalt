@@ -16,22 +16,22 @@
   }
 }
 .widget{
-  border-bottom: 1px solid var(--color-silver);
+  border-bottom: 1px solid $color-silver;
   &__item{
     &-link{
       display: block;
-      border-top: 1px solid var(--color-silver);
+      border-top: 1px solid $color-silver;
       padding: 12px 14px;
       font-size: 16px;
       line-height: 22px;
       transition: background-color 0.3s;
       &:hover{
-        background-color: var(--color-wild-sand);
+        background-color: $color-wild-sand;
         transition: background-color 0.3s;
       }
     }
     &--active > a{
-      background-color: var(--color-wild-sand);
+      background-color: $color-wild-sand;
       @include f700;
     }
   }
@@ -51,7 +51,7 @@
     font-size: 18px;
     line-height: 24px;
     color: #0e47a1;
-    background: #ebf4ff;
+    background-color: #ebf4ff;
   }
   &-text{
     font-size: 18px;

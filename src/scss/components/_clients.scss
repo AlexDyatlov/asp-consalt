@@ -7,7 +7,7 @@
     .swiper-pagination{
       bottom: 0;
       .swiper-pagination-bullet{
-        background-color: var(--color-silver);
+        background-color: $color-silver;
         &-active{
           position: relative;
           background-color: transparent;

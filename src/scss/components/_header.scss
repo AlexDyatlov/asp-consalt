@@ -3,7 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid var(--color-grey);
+    border-bottom: 1px solid $color-grey;
     min-height: 80px;
   }
 }
@@ -23,7 +23,7 @@
   width: 100%;
   max-width: 740px;
   &-info{
-    border-right: 1px solid var(--color-grey);
+    border-right: 1px solid $color-grey;
     padding-right: 15px;
     @include f700;
   }
@@ -35,25 +35,25 @@
     @include f400;
   }
   &-btn{
-    border: 3px solid var(--color-main);
+    border: 3px solid $color-main;
     border-radius: 3px;
     padding: 8px 15px;
     transition: background-color 0.3s;
     cursor: pointer;
     &:hover{
-      background-color: var(--color-main);
+      background-color: $color-main;
       transition: background-color 0.3s;
     }
   }
   &-phone:hover,
   &-mail:hover{
     .header__box-descr{
-      color: var(--color-black);
+      color: $color-black;
     }
   }
 }
 .header__bottom{
-  border-bottom: 1px solid var(--color-grey);
+  border-bottom: 1px solid $color-grey;
 }
 .burger{
   display: none;
@@ -62,7 +62,7 @@
   user-select: none;
   &__line{
     fill: none;
-    stroke: var(--color-black);
+    stroke: $color-black;
     stroke-linecap: round;
     stroke-width: 5.5;
     transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
@@ -109,14 +109,14 @@
   font-weight: 700;
   line-height: 30px;
   text-align: center;
-  background-color: var(--color-main);
+  background-color: $color-main;
   transition: background-color 0.3s;
   cursor: pointer;
   &-show{
     display: block;
   }
   &:hover{
-    background-color: var(--color-dark-main);
+    background-color: $color-dark-main;
     transition: background-color 0.3s;
   }
 }

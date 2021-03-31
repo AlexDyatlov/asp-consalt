@@ -5,7 +5,7 @@
     line-height: 18px;
     letter-spacing: 1.5px;
     text-transform: uppercase;
-    color: var(--color-dovgray);
+    color: $color-dovgray;
     &:hover{
       text-decoration: underline;
     }

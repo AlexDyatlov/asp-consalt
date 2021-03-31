@@ -1,6 +1,6 @@
 # Asp-consalt
 
-Разработка (дизайн, вёрстка) многостраничного сайта «АСП-Консалт».
+Разработка (дизайн, вёрстка) корпоративного сайта «АСП-Консалт».
 
 Запуск проекта в ide:
 
@@ -17,3 +17,12 @@
 3. Используются svg спрайты.
 4. Линтинг scss с помощью stylelint.
 5. Базовая SEO оптимизация.
+
+#### Изображения:
+
+<p align="center">
+  <img src="https://github.com/AlexDyatlov/asp-consalt/raw/master/app/img/Readme1.png">
+  <img src="https://github.com/AlexDyatlov/asp-consalt/raw/master/app/img/Readme2.png">
+  <img src="https://github.com/AlexDyatlov/asp-consalt/raw/master/app/img/Readme3.png">
+  <img src="https://github.com/AlexDyatlov/asp-consalt/raw/master/app/img/Readme4.png">
+</p>

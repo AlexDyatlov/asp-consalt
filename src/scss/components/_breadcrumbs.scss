@@ -1,5 +1,5 @@
 .breadcrumbs{
-  background-color: var(--color-wild-sand);
+  background-color: $color-wild-sand;
 }
 .breadcrumbs__list{
   padding: 15px 0;
@@ -15,19 +15,19 @@
         top: 9px;
         width: 5px;
         height: 5px;
-        background-color: var(--color-emperor);
+        background-color: $color-emperor;
       }
     }
   }
   &-link{
-    color: var(--color-dovgray);
+    color: $color-dovgray;
     transition: color 0.3s;
     &:hover{
-      color: var(--color-black);
+      color: $color-black;
       transition: color 0.3s;
     }
   }
   &--current{
-    color: var(--color-black);
+    color: $color-black;
   }
 }
