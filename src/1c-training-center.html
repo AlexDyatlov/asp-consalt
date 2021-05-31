@@ -1,22 +1,13 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="manifest" href="/manifest.webmanifest">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<meta name="theme-color" content="#111111">
-  <title>1С:Управление учебным центром</title>
-  <link rel="stylesheet" href="css/global.css">
-  <link rel="stylesheet" href="css/vendor.css">
-	<link rel="stylesheet" href="css/main.css">
-</head>
+@include('partials/head.html', {
+  "title": "1С:Управление учебным центром",
+  "meta": {
+    "description": "Услуга 1С - 1С:Управление учебным центром",
+    "keywords": "1С:Управление, образования, клиент, Услуги, Контакты"
+  }
+})
 <body>
 	<div class="site-container">
-		@include('partials/header-services.html')
+		@include('partials/header/header-services.html')
     <main class="main">
       <div class="breadcrumbs">
         <div class="container">
@@ -30,7 +21,7 @@
           </ul>
         </div>
       </div>
-      @include('partials/1c-training-center.html')
+      @include('partials/product/1c-training-center.html')
 		</main>
     @include('partials/modals.html')
     @include('partials/footer.html')

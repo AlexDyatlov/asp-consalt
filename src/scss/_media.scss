@@ -1,8 +1,10 @@
 @media (max-width: 1024px){
-  .header__box{
-    justify-content: flex-end;
-    max-width: 160px;
-    &-info{
+  .header{
+    &__box{
+      justify-content: flex-end;
+      max-width: 160px;
+    }
+    &__info{
       display: none;
     }
   }
@@ -28,7 +30,7 @@
   .footer__col:not(:last-child){
     margin-bottom: 40px;
   }
-  .footer__col-contacts{
+  .footer__col--contacts{
     max-width: 100%;
     .footer__col-list{
       margin-left: 55px;
@@ -64,7 +66,7 @@
     }
   }
   .content{
-    &__aside{
+    &__col{
       display: none;
     }
     &__main{
@@ -337,10 +339,6 @@
   }
 }
 @media (max-width: 480px){
-  .career__content-title{
-    font-size: 18px;
-    line-height: 24px;
-  }
   .content__item-title{
     font-weight: 700;
     font-size: 17px;

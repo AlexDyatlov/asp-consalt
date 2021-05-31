@@ -22,17 +22,13 @@
   justify-content: space-between;
   width: 100%;
   max-width: 740px;
-  &-info{
-    border-right: 1px solid $color-grey;
-    padding-right: 15px;
-    @include f700;
-  }
+  font-style: normal;
   &-descr{
     display: block;
     margin-top: 2px;
+    font-weight: 400;
     font-size: 16px;
     color: rgba(0, 0, 0, 0.54);
-    @include f400;
   }
   &-btn{
     border: 3px solid $color-main;
@@ -42,11 +38,15 @@
     cursor: pointer;
     &:hover{
       background-color: $color-main;
-      transition: background-color 0.3s;
     }
   }
-  &-phone:hover,
-  &-mail:hover{
+}
+.header__info{
+  border-right: 1px solid $color-grey;
+  padding-right: 15px;
+  font-weight: 700;
+  &--phone:hover,
+  &--mail:hover{
     .header__box-descr{
       color: $color-black;
     }
@@ -57,6 +57,7 @@
 }
 .burger{
   display: none;
+  padding: 0;
   -webkit-tap-highlight-color: transparent;
   transition: transform 400ms;
   user-select: none;
@@ -117,6 +118,5 @@
   }
   &:hover{
     background-color: $color-dark-main;
-    transition: background-color 0.3s;
   }
 }

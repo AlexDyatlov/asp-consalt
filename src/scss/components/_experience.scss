@@ -23,9 +23,9 @@
   max-width: 635px;
   &-title{
     margin-bottom: 20px;
+    font-weight: 700;
     font-size: 22px;
     line-height: 28px;
-    @include f700;
   }
   &-descr{
     margin-bottom: 20px;
@@ -34,11 +34,11 @@
   }
   &-link{
     padding: 12px 25px;
+    font-weight: 700;
     font-size: 12px;
     line-height: 18px;
     letter-spacing: 1px;
     text-transform: uppercase;
-    @include f700;
   }
 }
 .case__item{

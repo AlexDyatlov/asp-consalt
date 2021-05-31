@@ -63,10 +63,9 @@
     &:hover{
       padding-left: 25px;
       color: $color-dark-main;
-      transition: all 0.2s ease-in;
     }
   }
-  &.drop__down-services{
+  &.drop__down--services{
     width: 420px;
   }
 }

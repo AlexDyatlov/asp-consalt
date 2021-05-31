@@ -1,22 +1,13 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="manifest" href="/manifest.webmanifest">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<meta name="theme-color" content="#111111">
-  <title>Внедрение "1С:Университет ПРОФ" в РГГМУ</title>
-  <link rel="stylesheet" href="css/global.css">
-  <link rel="stylesheet" href="css/vendor.css">
-	<link rel="stylesheet" href="css/main.css">
-</head>
+@include('partials/head.html', {
+  "title": "Внедрение &quot;1С:Университет ПРОФ&quot; в РГГМУ",
+  "meta": {
+    "description": "Пример внедрения проекта компанией АСП-Консалт",
+    "keywords": "АСП-Консалт, Автоматизация, Образование, Внедрение, Кейсы, Компания, Услуги, Контакты"
+  }
+})
 <body>
 	<div class="site-container">
-		@include('partials/header-experience.html')
+		@include('partials/header/header-experience.html')
     <main class="main">
       <div class="breadcrumbs">
         <div class="container">
@@ -29,7 +20,7 @@
           </ul>
         </div>
       </div>
-      @include('partials/case-1s-universitet-prof.html')
+      @include('partials/product/case-1s-universitet-prof.html')
 		</main>
     @include('partials/modals.html')
     @include('partials/footer.html')

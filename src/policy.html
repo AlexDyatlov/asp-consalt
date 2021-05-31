@@ -1,24 +1,13 @@
-<!DOCTYPE html>
-<html lang="ru">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="manifest" href="/manifest.webmanifest">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="theme-color" content="#111111">
-  <title>Пользовательское соглашение</title>
-  <link rel="stylesheet" href="css/global.css">
-  <link rel="stylesheet" href="css/vendor.css">
-  <link rel="stylesheet" href="css/main.css">
-</head>
-
+@include('partials/head.html', {
+  "title": "Пользовательское соглашение",
+  "meta": {
+    "description": "Пользовательское соглашение компании АСП-Консалт",
+    "keywords": "АСП-Консалт, Оператор, персональных, данных, Услуги, Контакты"
+  }
+})
 <body>
   <div class="site-container">
-    @include('partials/header.html')
+    @include('partials/header/header.html')
     <main class="main">
       <div class="breadcrumbs">
         <div class="container">
@@ -42,12 +31,12 @@
             любая информация, относящаяся к определенному или определяемому на основании такой информации физическому
             лицу. Настоящее Согласие выдано мною на обработку следующих персональных данных:
           </p>
-          <ol class="policy__list ol__list">
-            <li class="policy__list-item ol__list-item">Имя;</li>
-            <li class="policy__list-item ol__list-item">Телефон;</li>
-            <li class="policy__list-item ol__list-item">E-mail;</li>
-            <li class="policy__list-item ol__list-item">Организация;</li>
-            <li class="policy__list-item ol__list-item">Комментарий.</li>
+          <ol class="policy__list info__list">
+            <li class="policy__list-item info__list-item">Имя;</li>
+            <li class="policy__list-item info__list-item">Телефон;</li>
+            <li class="policy__list-item info__list-item">E-mail;</li>
+            <li class="policy__list-item info__list-item">Организация;</li>
+            <li class="policy__list-item info__list-item">Комментарий.</li>
           </ol>
           <p class="policy__text">
             Согласие дано Оператору для совершения следующих действий с моими персональными данными с использованием
@@ -59,17 +48,17 @@
           <p class="policy__text">
             Данное согласие дается Оператору для обработки моих персональных данных в следующих целях:
           </p>
-          <ol class="policy__list ol__list">
-            <li class="policy__list-item ol__list-item">
+          <ol class="policy__list info__list">
+            <li class="policy__list-item info__list-item">
               предоставление мне услуг/работ;
             </li>
-            <li class="policy__list-item ol__list-item">
+            <li class="policy__list-item info__list-item">
               направление в мой адрес уведомлений, касающихся предоставляемых услуг/работ;
             </li>
-            <li class="policy__list-item ol__list-item">
+            <li class="policy__list-item info__list-item">
               подготовка и направление ответов на мои запросы;
             </li>
-            <li class="policy__list-item ol__list-item">
+            <li class="policy__list-item info__list-item">
               направление в мой адрес информации, в том числе рекламной, о мероприятиях/товарах/услугах/работах
               Оператора.
             </li>

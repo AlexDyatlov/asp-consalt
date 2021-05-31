@@ -4,13 +4,13 @@
     position: relative;
     display: block;
     padding: 30px;
+    font-weight: 400;
     font-size: 18px;
     line-height: 24px;
     text-align: left;
     transition: background-color 0.3s;
     cursor: pointer;
     user-select: none;
-    @include f400;
     &::before{
       content: "";
       position: absolute;
@@ -23,7 +23,6 @@
     }
     &:hover{
       background-color: $color-wild-sand;
-      transition: background-color 0.3s;
     }
   }
   &:not(:last-child){
@@ -32,12 +31,6 @@
 }
 .career__content{
   padding: 30px;
-  &-title{
-    margin-bottom: 10px;
-    font-size: 20px;
-    line-height: 26px;
-    @include f700;
-  }
   &-text{
     margin-bottom: 20px;
     text-transform: uppercase;

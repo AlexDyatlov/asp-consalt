@@ -5,9 +5,9 @@
   border: 1px solid $color-silver;
   padding: 30px;
   &-title{
+    font-weight: 700;
     font-size: 16px;
     line-height: 22px;
-    @include f700;
   }
   &-descr{
     color: #999;
