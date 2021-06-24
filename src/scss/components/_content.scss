@@ -57,8 +57,11 @@
   &-text{
     font-size: 18px;
     line-height: 24px;
+    &:not(:last-child){
+      margin-bottom: 20px;
+    }
   }
-  &--services{
+  &--large{
     margin-bottom: 40px;
   }
 }
@@ -77,6 +80,13 @@
     }
     &:not(:last-child){
       margin-bottom: 18px;
+    }
+  }
+  &-link{
+    text-decoration: underline;
+    transition: color 0.3s;
+    &:hover{
+      color: $color-dark-main;
     }
   }
 }

@@ -1,1 +1,367 @@
-"use strict";if(document.addEventListener("DOMContentLoaded",(function(){document.querySelectorAll(".accordion").forEach((function(e){e.addEventListener("click",(function(e){var t=e.currentTarget,a=t.querySelector(".accordion__control"),i=t.querySelector(".accordion__content");t.classList.toggle("open"),t.classList.contains("open")?(a.setAttribute("aria-expanded",!0),i.setAttribute("aria-hidden",!1),i.style.maxHeight=i.scrollHeight+"px"):(a.setAttribute("aria-expanded",!1),i.setAttribute("aria-hidden",!0),i.style.maxHeight=null)}))}))})),AOS.init({once:!0,delay:400}),document.querySelector(".to-top")){var trackScroll=function(){var e=window.pageYOffset,t=document.documentElement.clientHeight;e>t&&document.querySelector(".to-top").classList.add("to-top-show"),e<t&&document.querySelector(".to-top").classList.remove("to-top-show")},backToTop=function e(){window.pageYOffset>0&&(window.scrollBy(0,-80),setTimeout(e,0))};window.addEventListener("scroll",trackScroll),document.querySelector(".to-top").addEventListener("click",backToTop)}var bitrixSlider=new Swiper(".bitrix-slider",{loop:!0,slidesPerView:1,spaceBetween:10,centeredSlides:!0,pagination:{el:".swiper-pagination",type:"bullets",dynamicBullets:!0,clickable:!0},autoplay:{delay:2e3},breakpoints:{410:{slidesPerView:1.5,spaceBetween:15},610:{slidesPerView:2,spaceBetween:20},820:{slidesPerView:2.3}}}),analystsSlider=new Swiper(".analysts-slider",{loop:!0,slidesPerView:1,spaceBetween:10,centeredSlides:!0,pagination:{el:".swiper-pagination",type:"bullets",dynamicBullets:!0,clickable:!0},autoplay:{delay:3e3},breakpoints:{410:{slidesPerView:1.5,spaceBetween:15},610:{slidesPerView:2,spaceBetween:20},820:{slidesPerView:2.3}}}),programmersSlider=new Swiper(".programmers-slider",{loop:!0,slidesPerView:1,spaceBetween:10,centeredSlides:!0,pagination:{el:".swiper-pagination",type:"bullets",dynamicBullets:!0,clickable:!0},autoplay:{delay:4e3},breakpoints:{410:{slidesPerView:1.5,spaceBetween:15},610:{slidesPerView:2,spaceBetween:20},820:{slidesPerView:2.3}}});document.querySelectorAll('input[type="checkbox"]').forEach((function(e){var t=e.closest("label").nextElementSibling;e.addEventListener("change",(function(e){return t.disabled=!e.target.checked}))}));var clientsSlider=new Swiper(".clients-slider",{loop:!0,slidesPerView:1,autoplay:{delay:3e3},pagination:{el:".swiper-pagination",type:"bullets",dynamicBullets:!0,clickable:!0},breakpoints:{480:{slidesPerView:2,spaceBetween:20},760:{slidesPerView:3,spaceBetween:30},1025:{slidesPerView:4,spaceBetween:40}}}),burgerBtn=document.querySelector(".burger"),menu=document.querySelector(".menu"),itemDropDown=document.querySelectorAll(".menu__list-item.drop__down");burgerBtn.addEventListener("click",(function(){burgerBtn.classList.toggle("active"),menu.classList.toggle("menu--visible")})),itemDropDown.forEach((function(e){var t=e.querySelector(".drop__down-list");e.querySelector(".menu__list-link").addEventListener("click",(function(){t.classList.toggle("active")}))}));for(var element=document.querySelectorAll('input[type="tel"]'),maskOptions={mask:"+{7}(000)000-00-00"},i=0;i<element.length;i++)var mask=IMask(element[i],maskOptions);var servicesSlider=new Swiper(".services-slider",{loop:!0,slidesPerView:1,navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"},pagination:{el:".swiper-pagination",type:"bullets",clickable:!0}}),btns=document.querySelectorAll(".modal-btn"),modalOverlay=document.querySelector(".modal-overlay"),closeBtn=document.querySelectorAll(".modal-close"),modals=document.querySelectorAll(".modal");btns.forEach((function(e){e.addEventListener("click",(function(e){var t=e.currentTarget.getAttribute("data-path");modals.forEach((function(e){e.classList.remove("modal-overlay--visible")})),document.querySelector('[data-target="'.concat(t,'"]')).classList.add("modal--visible"),modalOverlay.classList.add("modal-overlay--visible")}))})),modalOverlay.addEventListener("click",(function(e){e.target===modalOverlay&&(modalOverlay.classList.remove("modal-overlay--visible"),modals.forEach((function(e){e.classList.remove("modal--visible")})))}));for(i=0;i<closeBtn.length;i++)closeBtn[i].addEventListener("click",(function(e){modalOverlay.classList.remove("modal-overlay--visible"),modals.forEach((function(e){e.classList.remove("modal--visible")}))}));var validateForms=function(e,t,a,i){new window.JustValidate(e,{rules:t,messages:{name:{required:"Поле обязательно для заполнения."},email:{required:"Поле обязательно для заполнения.",email:'Адрес электронной почты должен содержать символ "@".'},phone:{required:"Поле обязательно для заполнения."}},submitHandler:function(e){var t=new FormData(e),a=new XMLHttpRequest;a.onreadystatechange=function(){4===a.readyState&&200===a.status&&alert("Сообщение успешно отправлено!")},a.open("POST","mail.php",!0),a.send(t),e.reset()}})};validateForms(".form",{email:{required:!0,email:!0},name:{required:!0}},".thanks-popup","send goal"),validateForms(".modal__form--header",{email:{required:!0,email:!0},name:{required:!0},phone:{required:!0}},".thanks-popup","send goal"),validateForms(".modal__form--product",{email:{required:!0,email:!0},name:{required:!0},phone:{required:!0}},".thanks-popup","send goal"),validateForms(".modal__form--services",{email:{required:!0,email:!0},name:{required:!0}},".thanks-popup","send goal"),document.addEventListener("DOMContentLoaded",(function(){var e=document.querySelector(".tabs"),t=document.querySelectorAll(".tabs__btn"),a=document.querySelectorAll(".tabs__content");e&&e.addEventListener("click",(function(e){if(e.target.classList.contains("tabs__btn")){var t=e.target.dataset.tabsPath;i(t)}}));var i=function(e){t.forEach((function(e){e.classList.remove("tabs__btn--active")})),document.querySelector('[data-tabs-path="'.concat(e,'"]')).classList.add("tabs__btn--active"),a.forEach((function(e){e.classList.remove("tabs__content--active")})),document.querySelector('[data-tabs-target="'.concat(e,'"]')).classList.add("tabs__content--active")}}));
+"use strict";
+
+document.addEventListener('DOMContentLoaded', function () {
+  var accordions = document.querySelectorAll('.accordion');
+  accordions.forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      var self = e.currentTarget;
+      var control = self.querySelector('.accordion__control');
+      var content = self.querySelector('.accordion__content');
+      self.classList.toggle('open');
+
+      if (self.classList.contains('open')) {
+        control.setAttribute('aria-expanded', true);
+        content.setAttribute('aria-hidden', false);
+        content.style.maxHeight = content.scrollHeight + 'px';
+      } else {
+        control.setAttribute('aria-expanded', false);
+        content.setAttribute('aria-hidden', true);
+        content.style.maxHeight = null;
+      }
+    });
+  });
+});
+AOS.init({
+  once: true,
+  delay: 400
+});
+"use strict";
+
+if (document.querySelector('.to-top')) {
+  var trackScroll = function trackScroll() {
+    var scrolled = window.pageYOffset;
+    var coords = document.documentElement.clientHeight;
+
+    if (scrolled > coords) {
+      document.querySelector('.to-top').classList.add('to-top-show');
+    }
+
+    if (scrolled < coords) {
+      document.querySelector('.to-top').classList.remove('to-top-show');
+    }
+  };
+
+  var backToTop = function backToTop() {
+    if (window.pageYOffset > 0) {
+      window.scrollBy(0, -80);
+      setTimeout(backToTop, 0);
+    }
+  };
+
+  ;
+  ;
+  window.addEventListener('scroll', trackScroll);
+  document.querySelector('.to-top').addEventListener('click', backToTop);
+}
+
+;
+"use strict";
+
+var bitrixSlider = new Swiper('.bitrix-slider', {
+  loop: true,
+  slidesPerView: 1,
+  spaceBetween: 10,
+  centeredSlides: true,
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+    dynamicBullets: true,
+    clickable: true
+  },
+  autoplay: {
+    delay: 2000
+  },
+  breakpoints: {
+    410: {
+      slidesPerView: 1.5,
+      spaceBetween: 15
+    },
+    610: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    820: {
+      slidesPerView: 2.3
+    }
+  }
+});
+var analystsSlider = new Swiper('.analysts-slider', {
+  loop: true,
+  slidesPerView: 1,
+  spaceBetween: 10,
+  centeredSlides: true,
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+    dynamicBullets: true,
+    clickable: true
+  },
+  autoplay: {
+    delay: 3000
+  },
+  breakpoints: {
+    410: {
+      slidesPerView: 1.5,
+      spaceBetween: 15
+    },
+    610: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    820: {
+      slidesPerView: 2.3
+    }
+  }
+});
+var programmersSlider = new Swiper('.programmers-slider', {
+  loop: true,
+  slidesPerView: 1,
+  spaceBetween: 10,
+  centeredSlides: true,
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+    dynamicBullets: true,
+    clickable: true
+  },
+  autoplay: {
+    delay: 4000
+  },
+  breakpoints: {
+    410: {
+      slidesPerView: 1.5,
+      spaceBetween: 15
+    },
+    610: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    820: {
+      slidesPerView: 2.3
+    }
+  }
+});
+"use strict";
+
+document.querySelectorAll('input[type="checkbox"]').forEach(function (el) {
+  var btn = el.closest('label').nextElementSibling;
+  el.addEventListener('change', function (evt) {
+    return btn.disabled = !evt.target.checked;
+  });
+});
+"use strict";
+
+var clientsSlider = new Swiper('.clients-slider', {
+  loop: true,
+  slidesPerView: 1,
+  autoplay: {
+    delay: 3000
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+    dynamicBullets: true,
+    clickable: true
+  },
+  breakpoints: {
+    480: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    760: {
+      slidesPerView: 3,
+      spaceBetween: 30
+    },
+    1025: {
+      slidesPerView: 4,
+      spaceBetween: 40
+    }
+  }
+});
+"use strict";
+
+var burgerBtn = document.querySelector('.burger'),
+    menu = document.querySelector('.menu'),
+    itemDropDown = document.querySelectorAll('.menu__list-item.drop__down');
+burgerBtn.addEventListener('click', function () {
+  burgerBtn.classList.toggle('active');
+  menu.classList.toggle('menu--visible');
+});
+itemDropDown.forEach(function (buttonItem) {
+  var itemList = buttonItem.querySelector('.drop__down-list');
+  var dropDownLink = buttonItem.querySelector('.menu__list-link');
+  dropDownLink.addEventListener('click', function () {
+    itemList.classList.toggle('active');
+  });
+});
+"use strict";
+
+var element = document.querySelectorAll('input[type="tel"]');
+var maskOptions = {
+  mask: '+{7}(000)000-00-00'
+};
+
+for (var i = 0; i < element.length; i++) {
+  var mask = IMask(element[i], maskOptions);
+}
+
+;
+"use strict";
+
+var servicesSlider = new Swiper('.services-slider', {
+  loop: true,
+  slidesPerView: 1,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+    clickable: true
+  }
+});
+"use strict";
+
+var btns = document.querySelectorAll('.modal-btn'),
+    modalOverlay = document.querySelector('.modal-overlay'),
+    closeBtn = document.querySelectorAll('.modal-close'),
+    modals = document.querySelectorAll('.modal');
+btns.forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    var path = e.currentTarget.getAttribute('data-path');
+    modals.forEach(function (el) {
+      el.classList.remove('modal-overlay--visible');
+    });
+    document.querySelector("[data-target=\"".concat(path, "\"]")).classList.add('modal--visible');
+    modalOverlay.classList.add('modal-overlay--visible');
+  });
+});
+modalOverlay.addEventListener('click', function (e) {
+  if (e.target === modalOverlay) {
+    modalOverlay.classList.remove('modal-overlay--visible');
+    modals.forEach(function (el) {
+      el.classList.remove('modal--visible');
+    });
+  }
+});
+
+for (var i = 0; i < closeBtn.length; i++) {
+  closeBtn[i].addEventListener('click', function (e) {
+    modalOverlay.classList.remove('modal-overlay--visible');
+    modals.forEach(function (el) {
+      el.classList.remove('modal--visible');
+    });
+  });
+}
+
+;
+"use strict";
+
+var validateForms = function validateForms(selector, rules, successModal, yaGoal) {
+  new window.JustValidate(selector, {
+    rules: rules,
+    messages: {
+      name: {
+        required: 'Поле обязательно для заполнения.'
+      },
+      email: {
+        required: 'Поле обязательно для заполнения.',
+        email: 'Адрес электронной почты должен содержать символ "@".'
+      },
+      phone: {
+        required: 'Поле обязательно для заполнения.'
+      }
+    },
+    submitHandler: function submitHandler(form) {
+      var formData = new FormData(form);
+      var xhr = new XMLHttpRequest();
+
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+          if (xhr.status === 200) {
+            alert('Сообщение успешно отправлено!');
+          }
+        }
+      };
+
+      xhr.open('POST', 'mail.php', true);
+      xhr.send(formData);
+      form.reset();
+    }
+  });
+};
+
+validateForms('.form', {
+  email: {
+    required: true,
+    email: true
+  },
+  name: {
+    required: true
+  }
+}, '.thanks-popup', 'send goal');
+validateForms('.modal__form--header', {
+  email: {
+    required: true,
+    email: true
+  },
+  name: {
+    required: true
+  },
+  phone: {
+    required: true
+  }
+}, '.thanks-popup', 'send goal');
+validateForms('.modal__form--product', {
+  email: {
+    required: true,
+    email: true
+  },
+  name: {
+    required: true
+  },
+  phone: {
+    required: true
+  }
+}, '.thanks-popup', 'send goal');
+validateForms('.modal__form--large', {
+  email: {
+    required: true,
+    email: true
+  },
+  name: {
+    required: true
+  }
+}, '.thanks-popup', 'send goal');
+"use strict";
+
+document.addEventListener('DOMContentLoaded', function () {
+  var tabs = document.querySelector('.tabs');
+  var tabsBtn = document.querySelectorAll('.tabs__btn');
+  var tabsContent = document.querySelectorAll('.tabs__content');
+
+  if (tabs) {
+    tabs.addEventListener('click', function (e) {
+      if (e.target.classList.contains('tabs__btn')) {
+        var tabsPath = e.target.dataset.tabsPath;
+        tabsHandler(tabsPath);
+      }
+    });
+  }
+
+  ;
+
+  var tabsHandler = function tabsHandler(path) {
+    tabsBtn.forEach(function (el) {
+      el.classList.remove('tabs__btn--active');
+    });
+    document.querySelector("[data-tabs-path=\"".concat(path, "\"]")).classList.add('tabs__btn--active');
+    tabsContent.forEach(function (el) {
+      el.classList.remove('tabs__content--active');
+    });
+    document.querySelector("[data-tabs-target=\"".concat(path, "\"]")).classList.add('tabs__content--active');
+  };
+});
+"use strict";
+//# sourceMappingURL=main.js.map

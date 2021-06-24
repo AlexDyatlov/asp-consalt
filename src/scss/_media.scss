@@ -77,6 +77,36 @@
     width: 77.1%;
     max-width: 100%;
   }
+  .table.table__tariffs{
+    tbody tr{
+      &:nth-child(odd){
+        background-color: transparent;
+      }
+    }
+    thead{
+      display: none;
+    }
+    tr{
+      display: block;
+    }
+    td{
+      display: flex;
+      flex-direction: column;
+    }
+    td::before{
+      content: attr(data-label);
+      margin-bottom: 3px;
+      font-weight: 700;
+    }
+    .right{
+      width: 100%;
+      background-color: $color-grey;
+      button{
+        width: 100%;
+        font-weight: 700;
+      }
+    }
+  }
 }
 @media (max-width: 870px){
   .drop__down .menu__list-link::after{

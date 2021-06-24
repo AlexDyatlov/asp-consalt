@@ -1,0 +1,33 @@
+@include('partials/head.html', {
+  "title": "Страница в разработке",
+  "meta": {
+    "description": "Страница находится в разработке",
+    "keywords": "Ошибка, Компания, Услуги, Контакты"
+  }
+})
+<body>
+	<div class="site-container">
+		@include('partials/header/header.html')
+    <main class="main">
+      <section class="error">
+        <div class="container">
+          <div class="error__page">
+            <span class="error__page-code">
+              Ошибка
+            </span>
+            <h1 class="error__page-title">
+              Извините! Страница, которую Вы ищете, находится в разработке
+            </h1>
+            <a class="btn error__page-home" href="index.html">Перейти на главную</a>
+            <img class="error__page-img" src="img/404.png" alt="Страница 404">
+          </div>
+        </div>
+      </section>
+		</main>
+    @include('partials/modals.html')
+    @include('partials/footer.html')
+  </div>
+  <script src="js/vendor.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

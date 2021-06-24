@@ -70,7 +70,7 @@ validateForms('.modal__form--product', {
   }
 }, '.thanks-popup', 'send goal');
 
-validateForms('.modal__form--services', {
+validateForms('.modal__form--large', {
   email: {
     required: true,
     email: true

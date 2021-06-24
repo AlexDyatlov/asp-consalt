@@ -1,0 +1,32 @@
+@include('partials/head.html', {
+  "title": "1С:Управление образования",
+  "meta": {
+    "description": "Услуга 1С - 1С:Управление образования",
+    "keywords": "1С:Предприятие, 1С:Управление, образования, Компания, Услуги, Контакты"
+  }
+})
+<body>
+	<div class="site-container">
+    @include('partials/header/header-1c.html')
+    <main class="main">
+      <div class="breadcrumbs">
+        <div class="container">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__list-item"><a class="breadcrumbs__list-link" href="index.html">Главная</a></li>
+            <li class="breadcrumbs__list-item"><a class="breadcrumbs__list-link" href="its.html">1С</a></li>
+            <li class="breadcrumbs__list-item"><a class="breadcrumbs__list-link" href="its.html">1С:ИТС/1С:КП</a></li>
+            <li class="breadcrumbs__list-item"><span class="breadcrumbs__list-link breadcrumbs__list--current">
+              1С:ИТС Отраслевой
+            </span></li>
+          </ul>
+        </div>
+      </div>
+      @include('partials/product/1c-its-otraslevoi.html')
+		</main>
+    @include('partials/modals.html')
+    @include('partials/footer.html')
+  </div>
+  <script src="js/vendor.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
