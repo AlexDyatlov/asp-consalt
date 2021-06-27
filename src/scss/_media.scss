@@ -1,4 +1,15 @@
 @media (max-width: 1024px){
+  .register{
+    padding: 30px 0 80px;
+  }
+  .instrument__inner{
+    padding-right: 50px;
+  }
+  .instrument--left{
+    .instrument__inner{
+      padding-left: 50px;
+    }
+  }
   .header{
     &__box{
       justify-content: flex-end;
@@ -226,8 +237,49 @@
       height: 18px;
     }
   }
+  .bitrix__image{
+    display: none;
+  }
+  .instrument{
+    display: block;
+    padding: 30px 0;
+    &__title{
+      width: auto;
+    }
+    &__inner{
+      padding-right: 0;
+      padding-bottom: 40px;
+      width: 100%;
+    }
+  }
+  .picture{
+    padding: 0 0 62%;
+    transform: translate(0);
+  }
+  .instrument--left{
+    .picture{
+      transform: translate(0);
+    }
+    .instrument__inner{
+      padding-left: 0;
+    }
+  }
+  .boxed{
+    &__content{
+      order: -1;
+    }
+    &__inner{
+      flex-direction: column;
+    }
+    &__image{
+      height: 280px;
+    }
+  }
 }
 @media (max-width: 660px){
+  .register__title{
+    font-size: 22px;
+  }
   .about__desc{
     font-size: 20px;
     line-height: 26px;
@@ -305,8 +357,33 @@
     font-size: 24px;
     line-height: 30px;
   }
+  .boxed__image{
+    height: 220px;
+  }
 }
 @media (max-width: 576px){
+  .register{
+    padding: 20px 0 50px;
+  }
+  .instrument{
+    &__title{
+      font-size: 30px;
+    }
+    &__description{
+      font-size: 16px;
+      p:not(:last-child){
+        margin-bottom: 20px;
+      }
+    }
+  }
+  .boxed{
+    &__title{
+      font-size: 30px;
+    }
+    &__item{
+      font-size: 16px;
+    }
+  }
   .header__top{
     &-inner{
       flex-direction: column;
@@ -369,6 +446,18 @@
   }
 }
 @media (max-width: 480px){
+  .register__title{
+    font-size: 17px;
+  }
+  .bitrix{
+    &__title{
+      margin-bottom: 20px;
+      font-size: 30px;
+    }
+    &__text{
+      margin-bottom: 40px;
+    }
+  }
   .content__item-title{
     font-weight: 700;
     font-size: 17px;

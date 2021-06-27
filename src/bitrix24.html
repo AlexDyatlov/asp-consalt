@@ -1,0 +1,28 @@
+@include('partials/head.html', {
+  "title": "Битрикс24: Что такое Битрикс24?",
+  "meta": {
+    "description": "",
+    "keywords": "АСП-Консалт, Битрикс24, Контакты"
+  }
+})
+<body>
+	<div class="site-container">
+		@include('partials/header/header-bitrix24.html')
+    <main class="main">
+      @include('partials/bitrix/bitrix24.html')
+      @include('partials/bitrix/bitrix-office.html')
+      @include('partials/bitrix/bitrix-tasks.html')
+      @include('partials/bitrix/bitrix-crm.html')
+      @include('partials/bitrix/bitrix-center.html')
+      @include('partials/bitrix/bitrix-sites.html')
+      @include('partials/bitrix/bitrix-mobile.html')
+      @include('partials/bitrix/bitrix-box.html')
+      @include('partials/bitrix/bitrix-register.html')
+		</main>
+    @include('partials/modals.html')
+    @include('partials/footer.html')
+  </div>
+  <script src="js/vendor.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

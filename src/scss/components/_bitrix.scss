@@ -1,0 +1,32 @@
+.bitrix{
+  padding: 40px 0 50px;
+  background-image: linear-gradient(270deg, #ffdd2d 0%, #c69401 100%);
+  background-color: #ffdd2d;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__content{
+    margin-right: 15px;
+    width: 100%;
+    max-width: 500px;
+  }
+  &__title{
+    margin-bottom: 40px;
+    font-size: 40px;
+    line-height: 1.2;
+  }
+  &__text{
+    margin-bottom: 60px;
+    font-size: 18px;
+    line-height: 1.2;
+  }
+  &__image{
+    width: 480px;
+    height: 279px;
+    background: center/contain no-repeat;
+  }
+  &__btn{
+    padding: 15px 60px;
+  }
+}

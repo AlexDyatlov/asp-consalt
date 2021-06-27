@@ -79,3 +79,16 @@ validateForms('.modal__form--large', {
     required: true
   }
 }, '.thanks-popup', 'send goal');
+
+validateForms('.modal__form--bitrix', {
+  email: {
+    required: true,
+    email: true
+  },
+  name: {
+    required: true
+  },
+  phone: {
+    required: true
+  }
+}, '.thanks-popup', 'send goal');

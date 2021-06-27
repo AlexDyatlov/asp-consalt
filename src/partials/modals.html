@@ -10,15 +10,12 @@
         <input type="hidden" name="form_subject" value="Форма обратный звонок">
         <input type="hidden" name="admin_email[]" value="office@asp-consalt.ru">
         <label>
-          <span class="visually-hidden">Имя</span>
           <input class="modal__form-field" type="text" name="Name" placeholder="Ваше имя" data-validate-field="name">
         </label>
         <label>
-          <span class="visually-hidden">Почта</span>
           <input class="modal__form-field" type="email" name="E-mail" placeholder="Ваш E-mail" data-validate-field="email">
         </label>
         <label>
-          <span class="visually-hidden">Телефон</span>
           <input class="modal__form-field" type="tel" name="Phone" placeholder="Ваш телефон" data-validate-field="phone">
         </label>
         <label class="form__politics">
@@ -47,19 +44,15 @@
         <input type="hidden" name="form_subject" value="Форма информация по продукту">
         <input type="hidden" name="admin_email[]" value="office@asp-consalt.ru">
         <label>
-          <span class="visually-hidden">Имя</span>
           <input class="modal__form-field" type="text" name="Name" placeholder="Ваше имя" data-validate-field="name">
         </label>
         <label>
-          <span class="visually-hidden">Почта</span>
           <input class="modal__form-field" type="email" name="E-mail" placeholder="Ваш E-mail" data-validate-field="email">
         </label>
         <label>
-          <span class="visually-hidden">Ваша организация</span>
           <input class="modal__form-field" type="text" name="Company" placeholder="Ваша организация">
         </label>
         <label>
-          <span class="visually-hidden">Наименование продукта</span>
           <input class="modal__form-field" type="text" name="Name product" placeholder="Наименование продукта">
         </label>
         <label class="form__politics">
@@ -88,20 +81,53 @@
         <input type="hidden" name="form_subject" value="Форма с главной страницы">
         <input type="hidden" name="admin_email[]" value="office@asp-consalt.ru">
         <label>
-          <span class="visually-hidden">Имя</span>
           <input class="modal__form-field" type="text" name="Name" placeholder="Ваше имя" data-validate-field="name">
         </label>
         <label>
-          <span class="visually-hidden">Почта</span>
           <input class="modal__form-field" type="email" name="E-mail" placeholder="Ваш E-mail" data-validate-field="email">
         </label>
         <label>
-          <span class="visually-hidden">Ваша организация</span>
           <input class="modal__form-field" type="text" name="Company" placeholder="Ваша организация">
         </label>
         <label>
-          <span class="visually-hidden">Сообщение</span>
           <input class="modal__form-field" type="text" name="Message" placeholder="Сообщение">
+        </label>
+        <label class="form__politics">
+          <input type="checkbox" checked="checked">
+          <span class="form__politics-descr">
+            Я согласен на <a class="form__politics-link" href="policy.html" target="_blank">
+              обработку персональных данных
+            </a>
+          </span>
+        </label>
+        <button class="modal__form-btn" type="submit">Отправить</button>
+      </form>
+      <button class="modal-close">
+        <svg>
+          <use xlink:href="img/sprite.svg#close"></use>
+        </svg>
+      </button>
+    </div>
+
+    <div class="modal modal__info" data-target="four">
+      <div class="modal__info-title">Заявка на внедрение Битрикс24</div>
+      <p class="modal__info-descr">
+        Оставьте свои контакты, мы свяжемся с Вами в ближайшее время.
+      </p>
+      <form class="form modal__form--bitrix">
+        <input type="hidden" name="form_subject" value="Форма внедрения Битрикс24">
+        <input type="hidden" name="admin_email[]" value="office@asp-consalt.ru">
+        <label>
+          <input class="modal__form-field" type="text" name="Name" placeholder="Ваше имя" data-validate-field="name">
+        </label>
+        <label>
+          <input class="modal__form-field" type="email" name="E-mail" placeholder="Ваш E-mail" data-validate-field="email">
+        </label>
+        <label>
+          <input class="modal__form-field" type="tel" name="Phone" placeholder="Ваш телефон" data-validate-field="phone">
+        </label>
+        <label>
+          <input class="modal__form-field" type="text" name="Message" placeholder="Коротко опишите ваши задачи">
         </label>
         <label class="form__politics">
           <input type="checkbox" checked="checked">
