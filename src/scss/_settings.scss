@@ -1,16 +1,19 @@
-html{
+html {
   box-sizing: border-box;
 }
+
 *,
 *::before,
-*::after{
+*::after {
   box-sizing: inherit;
 }
+
 html,
-body{
+body {
   position: relative;
   overflow-x: hidden;
 }
+
 ul,
 ol,
 li,
@@ -20,20 +23,23 @@ h2,
 h3,
 h4,
 h5,
-h6{
+h6 {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-img{
+
+img {
   max-width: 100%;
 }
-a{
+
+a {
   display: inline-block;
   text-decoration: none;
   color: inherit;
 }
-body{
+
+body {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -41,52 +47,67 @@ body{
   color: $color-black;
   background-color: $color-white;
 }
-.site-container{
+
+.site-container {
   display: flex;
   flex-direction: column;
   height: 100%;
 }
-.visually-hidden{
-  @include visually-hidden;
+
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
 }
-.main{
+
+.main {
   min-height: calc(100vh - 570px);
 }
-.title{
+
+.title {
   margin: 30px 0;
   font-weight: 700;
   font-size: 31px;
   line-height: 37px;
 }
-.main-title{
+
+.main-title {
   margin-bottom: 30px;
   font-weight: 700;
   font-size: 31px;
   line-height: 37px;
   text-align: center;
 }
-button{
+
+button {
   border: none;
   background-color: transparent;
   cursor: pointer;
 }
-.btn{
+
+.btn {
   border-radius: 4px;
   padding: 8px 45px;
   color: $color-black;
   background-color: $color-main;
   transition: background-color 0.3s;
   cursor: pointer;
+
   &:focus,
-  &:hover{
+  &:hover {
     background-color: $color-dark-main;
   }
 }
-.container{
+
+.container {
   margin: 0 auto;
   padding: 0 15px;
   max-width: 1230px;
 }
-.js-focus-visible :focus:not(.focus-visible){
+
+.js-focus-visible :focus:not(.focus-visible) {
   outline: none;
 }

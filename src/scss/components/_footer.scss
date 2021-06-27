@@ -1,50 +1,58 @@
-.footer{
+.footer {
   position: relative;
   background-color: $color-wild-sand;
-  &__top{
+
+  &__top {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 60px 0 45px;
   }
 }
-.footer__col{
+
+.footer__col {
   width: 100%;
   font-style: normal;
-  &-title{
+
+  &-title {
     margin-bottom: 30px;
     font-size: 24px;
     line-height: 30px;
   }
-  &-item{
-    & + &{
+
+  &-item {
+    & + & {
       margin-top: 12px;
     }
   }
-  &-link{
+
+  &-link {
     color: rgba(0, 0, 0, 0.54);
     transition: color 0.3s ease-out;
+
     &:hover,
-    &:focus{
+    &:focus {
       color: $color-black;
     }
   }
-  &--company{
+
+  &--company {
     max-width: 236px;
   }
-  &--large{
+
+  &--large {
     max-width: 340px;
   }
-  &--contacts{
+
+  &--contacts {
     max-width: 300px;
   }
 }
-.footer__col--contacts .footer__col-item{
+
+.footer__col--contacts .footer__col-item {
   position: relative;
-  & + li{
-    margin-top: 40px;
-  }
-  svg{
+
+  svg {
     position: absolute;
     left: -50px;
     top: -4px;
@@ -52,11 +60,17 @@
     height: 30px;
     fill: $color-dark-main;
   }
+
+  &.footer__col-item + li {
+    margin-top: 40px;
+  }
 }
-.footer__col--contacts .footer__col--location svg{
+
+.footer__col--contacts .footer__col--location svg {
   top: 2px;
 }
-.footer__copy{
+
+.footer__copy {
   border-top: 1px solid $color-silver;
   padding: 15px 0;
 }

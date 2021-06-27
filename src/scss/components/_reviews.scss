@@ -1,29 +1,36 @@
-.reviews__list{
+.reviews__list {
   margin-bottom: 10px;
 }
-.reviews__item{
+
+.reviews__item {
   border: 1px solid $color-silver;
   padding: 30px;
-  &-title{
+
+  &-title {
     font-weight: 700;
     font-size: 16px;
     line-height: 22px;
   }
-  &-descr{
+
+  &-descr {
     color: #999;
   }
-  &-text:not(:last-child){
+
+  &-text:not(:last-child) {
     margin-bottom: 10px;
   }
-  &:not(:last-child){
+
+  &:not(:last-child) {
     margin-bottom: 40px;
   }
 }
-.reviews__info{
+
+.reviews__info {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
-  svg{
+
+  svg {
     margin-right: 30px;
     width: 100%;
     height: 70px;

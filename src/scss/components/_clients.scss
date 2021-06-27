@@ -1,14 +1,18 @@
-.clients{
+.clients {
   margin-bottom: 70px;
-  &-slider{
+
+  &-slider {
     position: relative;
     overflow-x: hidden;
     padding-bottom: 30px;
-    .swiper-pagination{
+
+    .swiper-pagination {
       bottom: 0;
-      .swiper-pagination-bullet{
+
+      .swiper-pagination-bullet {
         background-color: $color-silver;
-        &-active{
+
+        &-active {
           position: relative;
           background-color: transparent;
         }
@@ -16,7 +20,8 @@
     }
   }
 }
-.client__item{
+
+.client__item {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -24,12 +29,14 @@
   max-width: 260px;
   opacity: 0.5;
   transition: opacity 0.3s;
-  img{
+
+  img {
     display: block;
     height: auto;
     object-fit: cover;
   }
-  &:hover{
+
+  &:hover {
     opacity: 1;
   }
 }

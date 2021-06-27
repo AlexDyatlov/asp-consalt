@@ -1,20 +1,23 @@
-.error{
+.error {
   padding: 70px 0;
   text-align: center;
 }
-.error__page{
-  &-code{
+
+.error__page {
+  &-code {
     font-weight: 700;
     font-size: 34px;
     line-height: 40px;
   }
-  &-title{
+
+  &-title {
     margin-bottom: 20px;
     font-weight: 400;
     font-size: 20px;
     line-height: 26px;
   }
-  &-img{
+
+  &-img {
     display: block;
     margin: 0 auto;
     height: 400px;

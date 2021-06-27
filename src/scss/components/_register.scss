@@ -1,14 +1,16 @@
-.register{
+.register {
   padding: 100px 0;
   text-align: center;
   background: center/cover no-repeat;
-  &__title{
+
+  &__title {
     margin-bottom: 50px;
     font-weight: 400;
     font-size: 38px;
     line-height: 1.2;
   }
-  &__btn{
+
+  &__btn {
     padding: 15px 60px;
   }
 }

@@ -1,12 +1,14 @@
-.menu__list{
+.menu__list {
   display: flex;
   justify-content: space-between;
-  &-item{
-    &:not(:last-child){
+
+  &-item {
+    &:not(:last-child) {
       margin-right: 45px;
     }
   }
-  &-link{
+
+  &-link {
     position: relative;
     display: inline-block;
     padding: 16px 5px;
@@ -15,7 +17,8 @@
     color: rgba(0, 0, 0, 0.54);
     transition: all 0.3s;
     user-select: none;
-    &::before{
+
+    &::before {
       content: "";
       position: absolute;
       left: auto;
@@ -26,22 +29,26 @@
       background-color: $color-main;
       transition: all 0.3s;
     }
+
     &:hover,
-    &:focus{
+    &:focus {
       color: $color-black;
-      &::before{
+
+      &::before {
         left: 0;
         right: auto;
         width: 100%;
       }
-      &::after{
+
+      &::after {
         transform: rotate(180deg);
         transition: transform 0.3s;
       }
     }
   }
 }
-.drop__down-list{
+
+.drop__down-list {
   position: absolute;
   z-index: -1;
   overflow: hidden;
@@ -54,24 +61,30 @@
   background-color: #fcfcfc;
   opacity: 0;
   transition: all 0.3s;
-  li + li{
+
+  li + li {
     border-top: 0.5px solid $color-silver;
   }
-  a{
+
+  a {
     padding: 7px 10px;
     transition: all 0.2s ease-in;
-    &:hover{
+
+    &:hover {
       padding-left: 25px;
       color: $color-dark-main;
     }
   }
-  &.drop__down--large{
+
+  &.drop__down--large {
     width: 420px;
   }
 }
-.drop__down .menu__list-link{
+
+.drop__down .menu__list-link {
   position: relative;
-  &::after{
+
+  &::after {
     content: "";
     position: absolute;
     right: -18px;
@@ -82,31 +95,37 @@
     transition: transform 0.3s;
   }
 }
-.menu__list-item.drop__down{
-  &:hover{
-    .drop__down-list{
+
+.menu__list-item.drop__down {
+  &:hover {
+    .drop__down-list {
       z-index: 10;
       overflow: visible;
       height: auto;
       opacity: 1;
       transition: all 0.3s;
     }
-    & > a{
+
+    .drop__down > a {
       position: relative;
-      &::before{
+
+      &::before {
         left: 0;
         right: auto;
         width: 100%;
       }
     }
-    .menu__list-link::after{
+
+    .menu__list-link::after {
       transform: rotate(180deg);
     }
   }
 }
-.menu__link--active{
+
+.menu__link--active {
   color: $color-black;
-  &::before{
+
+  &::before {
     left: 0;
     right: auto;
     width: 100%;

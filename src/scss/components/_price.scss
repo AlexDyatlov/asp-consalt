@@ -1,79 +1,96 @@
-.price__list{
+.price__list {
   display: flex;
   justify-content: space-between;
   margin-bottom: 15px;
   border-bottom: 1px solid #acb5bd;
-  &-item{
+
+  &-item {
     margin-bottom: 7px;
     width: 21%;
-    .tabs__btn--active{
+
+    .tabs__btn--active {
       background-color: $color-athens-gray;
     }
   }
-  &-btn{
+
+  &-btn {
     border-radius: 25px 0;
     padding: 10px 20px;
     width: 100%;
     background-color: $color-wild-sand;
     transition: background-color 0.3s;
+
     &:hover,
-    &:focus{
+    &:focus {
       background-color: $color-athens-gray;
     }
   }
 }
-.table{
+
+.table {
   margin-bottom: 100px;
   border-collapse: collapse;
   width: 100%;
   max-width: 100%;
-  .right{
+
+  .right {
     width: 20%;
   }
-  &__top{
+
+  &__top {
     background-color: $color-main;
   }
-  &__period{
+
+  &__period {
     width: 480px;
   }
-  &__price{
+
+  &__price {
     width: 130px;
     max-width: 100%;
   }
-  &__btn{
+
+  &__btn {
     display: block;
+
     &:hover,
-    &:focus{
+    &:focus {
       font-weight: 700;
     }
   }
+
   th,
-  td{
+  td {
     border: 1px solid #7979793d;
     padding: 10px 15px;
     text-align: left;
   }
-  tbody tr:nth-child(odd){
+
+  tbody tr:nth-child(odd) {
     background-color: $color-grey;
   }
 }
-.tariffs{
+
+.tariffs {
   .table__period,
-  .table__name{
+  .table__name {
     text-align: left;
   }
-  &__btn{
+
+  &__btn {
     display: block;
     margin: 10px auto 0;
     padding: 10px 24px;
     width: 100%;
-    &:disabled{
+
+    &:disabled {
       background-color: #acb5bd;
       cursor: not-allowed;
     }
   }
+
   th,
-  td{
+  td {
     text-align: center;
   }
 }

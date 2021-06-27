@@ -1,107 +1,132 @@
-.content{
+.content {
   display: flex;
   justify-content: space-between;
-  &__main{
+
+  &__main {
     margin-bottom: 100px;
     width: 74.17%;
-    &-top{
+
+    &-top {
       display: flex;
       align-items: center;
       justify-content: space-between;
       margin-bottom: 15px;
     }
   }
-  &__col{
+
+  &__col {
     width: 20.84%;
   }
 }
-.widget{
+
+.widget {
   border-bottom: 1px solid $color-silver;
-  &__item{
-    &-link{
+
+  &__item {
+    &-link {
       display: block;
       border-top: 1px solid $color-silver;
       padding: 12px 14px;
       font-size: 16px;
       line-height: 22px;
       transition: background-color 0.3s;
-      &:hover{
+
+      &:hover {
         background-color: $color-wild-sand;
       }
     }
-    &--active > a{
+
+    &--active > a {
       font-weight: 700;
       background-color: $color-wild-sand;
     }
   }
 }
-.company__directions{
+
+.company__directions {
   margin-bottom: 40px;
 }
-.content__item{
-  &:not(:last-child){
+
+.content__item {
+  &:not(:last-child) {
     margin-bottom: 40px;
   }
-  &-title{
+
+  &-title {
     margin-bottom: 20px;
     font-weight: 400;
     font-size: 28px;
     line-height: 34px;
   }
-  &-descr{
+
+  &-descr {
     padding: 30px;
     font-size: 18px;
     line-height: 24px;
     background-color: $color-wild-sand;
   }
-  &-text{
+
+  &-text {
     font-size: 18px;
     line-height: 24px;
-    &:not(:last-child){
+
+    &:not(:last-child) {
       margin-bottom: 20px;
     }
   }
-  &--large{
+
+  &--large {
     margin-bottom: 40px;
   }
 }
-.info__list{
+
+.info__list {
   counter-reset: li;
   margin: 10px 0 40px;
-  &-item{
+
+  &-item {
     position: relative;
     padding-left: 30px;
-    &::before{
+
+    &::before {
       counter-increment: li;
       content: counter(li) ". ";
       position: absolute;
       left: 0;
       font-weight: 700;
     }
-    &:not(:last-child){
+
+    &:not(:last-child) {
       margin-bottom: 18px;
     }
   }
-  &-link{
+
+  &-link {
     text-decoration: underline;
     transition: color 0.3s;
-    &:hover{
+
+    &:hover {
       color: $color-dark-main;
     }
   }
 }
-.content__info{
+
+.content__info {
   margin-bottom: 10px;
   font-weight: 700;
-  &-list{
+
+  &-list {
     padding-left: 35px;
-    &:not(:last-child){
+
+    &:not(:last-child) {
       margin-bottom: 30px;
     }
   }
-  &-item{
+
+  &-item {
     position: relative;
-    &::before{
+
+    &::before {
       content: "";
       position: absolute;
       left: -31px;
@@ -110,7 +135,8 @@
       height: 24px;
       background: center/cover no-repeat url("../img/check.svg");
     }
-    &:not(:last-child){
+
+    &:not(:last-child) {
       margin-bottom: 5px;
     }
   }

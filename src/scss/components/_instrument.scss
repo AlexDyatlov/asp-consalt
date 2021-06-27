@@ -1,22 +1,26 @@
-.instrument{
+.instrument {
   display: flex;
   overflow: hidden;
   padding: 60px 0;
-  &__content{
+
+  &__content {
     display: flex;
     flex: 0 0 100%;
     align-items: center;
   }
-  &__inner{
+
+  &__inner {
     padding-right: 65px;
     width: 50%;
   }
-  &__title{
+
+  &__title {
     margin-bottom: 30px;
     font-weight: 400;
     font-size: 38px;
     line-height: 1.2;
-    &-text{
+
+    &-text {
       display: block;
       font-weight: 700;
       font-size: 12px;
@@ -24,19 +28,23 @@
       color: $color-dark-main;
     }
   }
-  &__description{
+
+  &__description {
     font-size: 18px;
-    p:not(:last-child){
+
+    p:not(:last-child) {
       margin-bottom: 40px;
     }
   }
 }
-.picture{
+
+.picture {
   position: relative;
   flex: 0 0 50%;
   padding: 0 0 31%;
   transform: translate(-100%, 0);
-  &__img{
+
+  &__img {
     position: absolute;
     left: 0;
     top: 0;
@@ -45,13 +53,15 @@
     object-fit: contain;
   }
 }
-.instrument--left{
-  .instrument__inner{
+
+.instrument--left {
+  .instrument__inner {
     margin-left: auto;
     padding-right: 0;
     padding-left: 65px;
   }
-  .picture{
+
+  .picture {
     transform: translate(-200%, 0);
   }
 }

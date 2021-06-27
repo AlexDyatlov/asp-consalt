@@ -1,16 +1,19 @@
-.advantages{
+.advantages {
   padding: 30px 0 70px;
-  &__title{
+
+  &__title {
     margin-bottom: 60px;
   }
-  &__inner{
+
+  &__inner {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     margin-left: -30px;
   }
 }
-.card{
+
+.card {
   flex-basis: calc(33.3333% - 30px);
   margin-bottom: 30px;
   margin-left: 30px;
@@ -18,16 +21,19 @@
   min-height: 280px;
   perspective: 1000px;
   transform-style: preserve-3d;
-  &:hover{
-    .card__flip-front{
+
+  &:hover {
+    .card__flip-front {
       transform: rotateY(-180deg);
     }
-    .card__flip-back{
+
+    .card__flip-back {
       transform: rotateY(0deg);
     }
   }
 }
-.card__flip{
+
+.card__flip {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -39,7 +45,8 @@
   background: center/cover no-repeat $color-dovgray;
   backface-visibility: hidden;
   transition: 0.5s ease-in-out;
-  &::before{
+
+  &::before {
     content: "";
     position: absolute;
     left: 0;
@@ -50,37 +57,44 @@
     background-color: rgba(0, 0, 0, 0.5);
     backface-visibility: hidden;
   }
-  &-back{
+
+  &-back {
     position: absolute;
     left: 0;
     top: 0;
     transform: rotateY(180deg);
     transform-style: preserve-3d;
   }
-  &:hover{
+
+  &:hover {
     transform-style: preserve-3d;
   }
 }
+
 .card__flip-front,
-.card__flip:hover .card__flip-back{
+.card__flip:hover .card__flip-back {
   transform: rotateY(0deg);
   transform-style: preserve-3d;
 }
-.card__item{
+
+.card__item {
   text-align: center;
   transform: translateY(-28%) translateZ(65px) scale(0.92);
-  &-title{
+
+  &-title {
     margin-top: 30px;
     font-size: 18px;
     line-height: 24px;
   }
-  &-text{
+
+  &-text {
     padding: 0 10px;
     font-size: 16px;
     line-height: 22px;
     transform: translateY(20%);
   }
-  svg{
+
+  svg {
     width: 70px;
     height: 70px;
     fill: $color-main;

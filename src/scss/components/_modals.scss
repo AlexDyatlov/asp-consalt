@@ -1,4 +1,4 @@
-.modal{
+.modal {
   position: relative;
   display: flex;
   display: none;
@@ -8,7 +8,8 @@
   width: 500px;
   min-height: 480px;
   background-color: $color-white;
-  &-overlay{
+
+  &-overlay {
     position: fixed;
     left: 0;
     right: 0;
@@ -24,59 +25,69 @@
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease-in-out;
-    &--visible{
+
+    &--visible {
       opacity: 1;
       visibility: visible;
       transition: all 0.3s ease-in-out;
     }
   }
-  &-close{
+
+  &-close {
     position: absolute;
     right: 7px;
     top: 10px;
     width: 30px;
     height: 20px;
     cursor: pointer;
-    svg{
+
+    svg {
       width: 100%;
       height: 100%;
       fill: $color-silver;
       transition: fill 0.3s;
     }
-    &:hover svg{
+
+    &:hover svg {
       fill: $color-black;
     }
   }
-  &--visible{
+
+  &--visible {
     display: block;
   }
 }
-.modal__info{
-  &-title{
+
+.modal__info {
+  &-title {
     margin-bottom: 15px;
     font-weight: 700;
     font-size: 30px;
     line-height: 36px;
     text-align: center;
   }
-  &-descr{
+
+  &-descr {
     margin-bottom: 30px;
     text-align: center;
   }
 }
-.modal__form{
-  &-field{
+
+.modal__form {
+  &-field {
     margin-bottom: 18px;
     outline: transparent;
     border: none;
     border-bottom: 1px solid $color-black;
     padding: 0 10px;
     width: 100%;
-    &:nth-last-child(3){
+
+    &:nth-last-child(3) {
       margin-bottom: 25px;
     }
   }
-  &-btn{
+
+  &-btn {
     margin-top: 30px;
     border-radius: 4px;
     width: 100%;
@@ -87,26 +98,32 @@
     letter-spacing: 1.8px;
     background-color: $color-main;
     transition: background-color 0.4s;
-    &:hover{
+
+    &:hover {
       background-color: $color-dark-main;
     }
-    &:disabled{
+
+    &:disabled {
       color: $color-black;
       background-color: $color-silver;
       cursor: not-allowed;
     }
   }
 }
-.form__politics{
+
+.form__politics {
   cursor: pointer;
-  input{
+
+  input {
     position: absolute;
     z-index: -1;
     opacity: 0;
   }
-  &-descr{
+
+  &-descr {
     user-select: none;
-    &::before{
+
+    &::before {
       content: "";
       display: inline-block;
       vertical-align: -1px;
@@ -118,26 +135,32 @@
       background: center/70% no-repeat;
     }
   }
-  &-link{
+
+  &-link {
     color: #3b55e6;
-    &:hover{
+
+    &:hover {
       text-decoration: underline;
     }
   }
 }
-.form__politics input:not(:disabled):not(:checked) + .form__politics-descr:hover::before{
+
+.form__politics input:not(:disabled):not(:checked) + .form__politics-descr:hover::before {
   border-color: $color-dark-main;
 }
-.form__politics input:focus + .form__politics-descr::before{
+
+.form__politics input:focus + .form__politics-descr::before {
   border-color: $color-dark-main;
   box-shadow: 0 0 0 0.2rem rgba(252, 197, 33, 0.25);
 }
-.form__politics input:checked + .form__politics-descr::before{
+
+.form__politics input:checked + .form__politics-descr::before {
   border-color: $color-dark-main;
   background-image: url("../img/checked.svg");
   background-color: $color-dark-main;
 }
-.modal__form-field.js-validate-error-field{
+
+.modal__form-field.js-validate-error-field {
   border: none !important;
   border-bottom: 1px solid #f30202 !important;
 }

@@ -1,14 +1,18 @@
-.breadcrumbs{
+.breadcrumbs {
   background-color: $color-wild-sand;
 }
-.breadcrumbs__list{
+
+.breadcrumbs__list {
   padding: 15px 0;
-  &-item{
+
+  &-item {
     position: relative;
     display: inline-block;
-    &:not(:first-child){
+
+    &:not(:first-child) {
       margin-left: 35px;
-      &::before{
+
+      &::before {
         content: "";
         position: absolute;
         left: -22px;
@@ -19,14 +23,17 @@
       }
     }
   }
-  &-link{
+
+  &-link {
     color: $color-dovgray;
     transition: color 0.3s;
-    &:hover{
+
+    &:hover {
       color: $color-black;
     }
   }
-  &--current{
+
+  &--current {
     color: $color-black;
   }
 }

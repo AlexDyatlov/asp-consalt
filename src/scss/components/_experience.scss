@@ -1,38 +1,45 @@
-.experience__item{
+.experience__item {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 30px;
   box-shadow: 0 0 27px -1px rgba(0, 0, 0, 0.15);
-  &-img{
+
+  &-img {
     width: 100%;
     height: 130px;
     max-width: 130px;
     line-height: 0;
-    img{
+
+    img {
       height: 100%;
       object-fit: scale-down;
     }
   }
-  &:not(:last-child){
+
+  &:not(:last-child) {
     margin-bottom: 40px;
   }
 }
-.case__info{
+
+.case__info {
   margin-left: 15px;
   max-width: 635px;
-  &-title{
+
+  &-title {
     margin-bottom: 20px;
     font-weight: 700;
     font-size: 22px;
     line-height: 28px;
   }
-  &-descr{
+
+  &-descr {
     margin-bottom: 20px;
     font-size: 16px;
     line-height: 22px;
   }
-  &-link{
+
+  &-link {
     padding: 12px 25px;
     font-weight: 700;
     font-size: 12px;
@@ -41,37 +48,45 @@
     text-transform: uppercase;
   }
 }
-.case__item{
-  &-img{
+
+.case__item {
+  &-img {
     width: 130px;
     height: 130px;
     object-fit: scale-down;
   }
-  &-name{
+
+  &-name {
     margin-bottom: 3px;
-    span{
+
+    span {
       font-weight: 700;
     }
   }
-  &-link{
+
+  &-link {
     margin-top: 30px;
     letter-spacing: 1px;
   }
 }
-.case__list{
+
+.case__list {
   margin-bottom: 30px;
-  &-item{
+
+  &-item {
     display: inline-block;
     margin-top: 10px;
     border-radius: 42px;
     padding: 7px 12px;
     background-color: $color-main;
     user-select: none;
-    &:not(:last-child){
+
+    &:not(:last-child) {
       position: relative;
       margin-right: 8px;
       padding-right: 40px;
-      &::before{
+
+      &::before {
         content: "";
         position: absolute;
         right: 15px;

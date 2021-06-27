@@ -1,6 +1,7 @@
-.career__item{
+.career__item {
   border: 1px solid $color-silver;
-  &-title{
+
+  &-title {
     position: relative;
     display: block;
     padding: 30px;
@@ -11,7 +12,8 @@
     transition: background-color 0.3s;
     cursor: pointer;
     user-select: none;
-    &::before{
+
+    &::before {
       content: "";
       position: absolute;
       right: 20px;
@@ -21,29 +23,36 @@
       background: center/cover no-repeat url("../img/arrow-menu.svg");
       transition: transform 0.3s;
     }
-    &:hover{
+
+    &:hover {
       background-color: $color-wild-sand;
     }
   }
-  &:not(:last-child){
+
+  &:not(:last-child) {
     margin-bottom: 40px;
   }
 }
-.career__content{
+
+.career__content {
   padding: 30px;
-  &-text{
+
+  &-text {
     margin-bottom: 20px;
     text-transform: uppercase;
-    span{
+
+    span {
       display: block;
     }
   }
 }
-.accordion__control{
+
+.accordion__control {
   padding: 0;
   width: 100%;
 }
-.accordion__content{
+
+.accordion__content {
   overflow: hidden;
   padding: 0 20px;
   max-height: 0;
@@ -52,15 +61,18 @@
   transition: all 0.3s ease-out;
   will-change: max-height;
 }
-.open .accordion__control{
+
+.open .accordion__control {
   background-color: $color-wild-sand;
-  .career__item-title{
-    &::before{
+
+  .career__item-title {
+    &::before {
       transform: rotate(180deg);
     }
   }
 }
-.open .accordion__content{
+
+.open .accordion__content {
   padding: 20px;
   opacity: 1;
 }
