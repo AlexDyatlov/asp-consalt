@@ -1,7 +1,7 @@
 @include('partials/head.html', {
   "title": "Битрикс24: Что такое Битрикс24?",
   "meta": {
-    "description": "",
+    "description": "Битрикс24 - это набор из пяти важных и полезных инструментов, которые помогают бизнесу работать: CRM, Задачи и проекты, Контакт-центр, Сайты и магазины, Онлайн-офис.",
     "keywords": "АСП-Консалт, Битрикс24, Контакты"
   }
 })
@@ -9,6 +9,14 @@
 	<div class="site-container">
 		@include('partials/header/header-bitrix24.html')
     <main class="main">
+      <div class="breadcrumbs">
+        <div class="container">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__list-item"><a class="breadcrumbs__list-link" href="index.html">Главная</a></li>
+            <li class="breadcrumbs__list-item"><span class="breadcrumbs__list-link breadcrumbs__list--current">Битрикс24</span></li>
+          </ul>
+        </div>
+      </div>
       @include('partials/bitrix/bitrix24.html')
       @include('partials/bitrix/bitrix-office.html')
       @include('partials/bitrix/bitrix-tasks.html')
