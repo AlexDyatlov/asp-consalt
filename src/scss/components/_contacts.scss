@@ -4,12 +4,21 @@
   &__map {
     margin-bottom: 70px;
     min-height: 420px;
+
+    @include mobile {
+      margin-bottom: 30px;
+    }
   }
 
   &__box {
     position: relative;
     max-width: 375px;
     font-style: normal;
+
+    @include mobile {
+      margin-bottom: 30px;
+      max-width: 100%;
+    }
   }
 }
 
@@ -49,6 +58,26 @@
       text-decoration: underline;
     }
   }
+
+  @include tablet {
+    left: 20px;
+    top: -30px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -10px;
+      top: -10px;
+      border: 1px solid #1e1e25;
+      border-radius: 8px;
+      width: 97%;
+      height: 97%;
+    }
+  }
+
+  @include mobile {
+    position: static;
+  }
 }
 
 .connection__box {
@@ -65,6 +94,16 @@
       height: 100%;
       object-fit: cover;
     }
+
+    @include middle-tablet {
+      margin-right: 0;
+      margin-bottom: 50px;
+      max-width: 870px;
+    }
+  }
+
+  @include middle-tablet {
+    flex-direction: column;
   }
 }
 
@@ -134,12 +173,20 @@
         opacity: 0;
       }
     }
+
+    @include small-mobile {
+      width: 100%;
+    }
   }
 
   textarea {
     margin-bottom: 20px;
     height: 110px;
     resize: none;
+  }
+
+  @include small-tablet {
+    max-width: 100%;
   }
 }
 

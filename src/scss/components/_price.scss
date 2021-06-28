@@ -11,6 +11,10 @@
     .tabs__btn--active {
       background-color: $color-athens-gray;
     }
+
+    @include tablet {
+      width: 100%;
+    }
   }
 
   &-btn {
@@ -24,6 +28,14 @@
     &:focus {
       background-color: $color-athens-gray;
     }
+
+    @include tablet {
+      padding: 15px 20px;
+    }
+  }
+
+  @include tablet {
+    flex-wrap: wrap;
   }
 }
 
@@ -35,6 +47,16 @@
 
   .right {
     width: 20%;
+
+    @include mobile {
+      width: 100%;
+      background-color: $color-grey;
+
+      button {
+        width: 100%;
+        font-weight: 700;
+      }
+    }
   }
 
   &__top {
@@ -68,6 +90,70 @@
 
   tbody tr:nth-child(odd) {
     background-color: $color-grey;
+
+    @include mobile {
+      background-color: transparent;
+    }
+  }
+
+  @include mobile {
+    thead {
+      display: none;
+    }
+
+    tr {
+      display: block;
+    }
+
+    td {
+      display: flex;
+      flex-direction: column;
+
+      &::before {
+        content: attr(data-label);
+        margin-bottom: 3px;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+.table.table__tariffs {
+  @include tablet {
+    tbody tr {
+      &:nth-child(odd) {
+        background-color: transparent;
+      }
+    }
+
+    thead {
+      display: none;
+    }
+
+    tr {
+      display: block;
+    }
+
+    td {
+      display: flex;
+      flex-direction: column;
+    }
+
+    td::before {
+      content: attr(data-label);
+      margin-bottom: 3px;
+      font-weight: 700;
+    }
+
+    .right {
+      width: 100%;
+      background-color: $color-grey;
+
+      button {
+        width: 100%;
+        font-weight: 700;
+      }
+    }
   }
 }
 

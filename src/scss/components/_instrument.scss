@@ -12,6 +12,16 @@
   &__inner {
     padding-right: 65px;
     width: 50%;
+
+    @include tablet {
+      padding-right: 50px;
+    }
+
+    @include middle-tablet {
+      padding-right: 0;
+      padding-bottom: 40px;
+      width: 100%;
+    }
   }
 
   &__title {
@@ -27,6 +37,14 @@
       text-transform: uppercase;
       color: $color-dark-main;
     }
+
+    @include middle-tablet {
+      width: auto;
+    }
+
+    @include mobile {
+      font-size: 30px;
+    }
   }
 
   &__description {
@@ -34,7 +52,20 @@
 
     p:not(:last-child) {
       margin-bottom: 40px;
+
+      @include mobile {
+        margin-bottom: 20px;
+      }
     }
+
+    @include mobile {
+      font-size: 16px;
+    }
+  }
+
+  @include middle-tablet {
+    display: block;
+    padding: 30px 0;
   }
 }
 
@@ -52,6 +83,11 @@
     height: 100%;
     object-fit: contain;
   }
+
+  @include middle-tablet {
+    padding: 0 0 62%;
+    transform: translate(0);
+  }
 }
 
 .instrument--left {
@@ -59,9 +95,21 @@
     margin-left: auto;
     padding-right: 0;
     padding-left: 65px;
+
+    @include tablet {
+      padding-left: 50px;
+    }
+
+    @include middle-tablet {
+      padding-left: 0;
+    }
   }
 
   .picture {
     transform: translate(-200%, 0);
+
+    @include middle-tablet {
+      transform: translate(0);
+    }
   }
 }

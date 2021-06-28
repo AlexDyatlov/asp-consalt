@@ -1,5 +1,9 @@
 .breadcrumbs {
   background-color: $color-wild-sand;
+
+  @include tablet {
+    overflow-x: auto;
+  }
 }
 
 .breadcrumbs__list {
@@ -35,5 +39,9 @@
 
   &--current {
     color: $color-black;
+  }
+
+  @include tablet {
+    width: 1100px;
   }
 }

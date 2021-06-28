@@ -5,11 +5,19 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include middle-tablet {
+      flex-direction: column;
+    }
   }
 
   &__content {
     width: 100%;
     max-width: 450px;
+
+    @include middle-tablet {
+      order: -1;
+    }
   }
 
   &__title {
@@ -17,6 +25,10 @@
     font-weight: 400;
     font-size: 38px;
     line-height: 1.2;
+
+    @include mobile {
+      font-size: 30px;
+    }
   }
 
   &__item {
@@ -25,6 +37,10 @@
     &:not(:last-child) {
       margin-bottom: 15px;
     }
+
+    @include mobile {
+      font-size: 16px;
+    }
   }
 
   &__image {
@@ -32,5 +48,13 @@
     height: 377px;
     max-width: 673px;
     background: center/contain no-repeat;
+
+    @include middle-tablet {
+      height: 280px;
+    }
+
+    @include small-tablet {
+      height: 220px;
+    }
   }
 }

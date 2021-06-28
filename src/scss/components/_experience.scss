@@ -15,10 +15,19 @@
       height: 100%;
       object-fit: scale-down;
     }
+
+    @include small-tablet {
+      margin: 0 auto 15px;
+    }
   }
 
   &:not(:last-child) {
     margin-bottom: 40px;
+  }
+
+  @include small-tablet {
+    flex-wrap: wrap;
+    padding: 30px 15px;
   }
 }
 
@@ -31,12 +40,22 @@
     font-weight: 700;
     font-size: 22px;
     line-height: 28px;
+
+    @include small-mobile {
+      font-size: 18px;
+      line-height: 24px;
+    }
   }
 
   &-descr {
     margin-bottom: 20px;
     font-size: 16px;
     line-height: 22px;
+
+    @include small-mobile {
+      font-size: 14px;
+      line-height: 20px;
+    }
   }
 
   &-link {
@@ -47,6 +66,16 @@
     letter-spacing: 1px;
     text-transform: uppercase;
   }
+
+  @include tablet {
+    width: 77.1%;
+    max-width: 100%;
+  }
+
+  @include small-tablet {
+    margin-left: 0;
+    width: 100%;
+  }
 }
 
 .case__item {
@@ -54,6 +83,11 @@
     width: 130px;
     height: 130px;
     object-fit: scale-down;
+
+    @include small-tablet {
+      order: -1;
+      margin: 0 auto 15px;
+    }
   }
 
   &-name {
@@ -95,6 +129,10 @@
         height: 11px;
         background: center/cover no-repeat url("../img/arrow.svg");
       }
+    }
+
+    @include mobile {
+      font-size: 11px;
     }
   }
 }

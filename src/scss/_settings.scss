@@ -72,6 +72,22 @@ body {
   font-weight: 700;
   font-size: 31px;
   line-height: 37px;
+
+  @include middle-tablet {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  @include mobile {
+    border-bottom: 2px solid $color-main;
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  @include small-mobile {
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
 
 .main-title {
@@ -99,6 +115,11 @@ button {
   &:focus,
   &:hover {
     background-color: $color-dark-main;
+  }
+
+  @include small-mobile {
+    width: 100%;
+    text-align: center;
   }
 }
 

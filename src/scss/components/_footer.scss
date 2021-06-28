@@ -18,11 +18,19 @@
     margin-bottom: 30px;
     font-size: 24px;
     line-height: 30px;
+
+    @include small-tablet {
+      margin-bottom: 15px;
+    }
   }
 
   &-item {
     & + & {
       margin-top: 12px;
+
+      @include small-tablet {
+        margin-top: 20px;
+      }
     }
   }
 
@@ -46,6 +54,24 @@
 
   &--contacts {
     max-width: 300px;
+
+    @include tablet {
+      max-width: 100%;
+
+      .footer__col-list {
+        margin-left: 55px;
+      }
+    }
+  }
+
+  @include tablet {
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+
+  @include small-tablet {
+    max-width: 100%;
   }
 }
 
@@ -73,4 +99,8 @@
 .footer__copy {
   border-top: 1px solid $color-silver;
   padding: 15px 0;
+
+  @include small-mobile {
+    padding: 20px 0;
+  }
 }

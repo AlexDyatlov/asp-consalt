@@ -18,18 +18,31 @@
     margin-bottom: 40px;
     font-size: 40px;
     line-height: 1.2;
+
+    @include small-mobile {
+      margin-bottom: 20px;
+      font-size: 30px;
+    }
   }
 
   &__text {
     margin-bottom: 60px;
     font-size: 18px;
     line-height: 1.2;
+
+    @include small-mobile {
+      margin-bottom: 40px;
+    }
   }
 
   &__image {
     width: 480px;
     height: 279px;
     background: center/contain no-repeat;
+
+    @include middle-tablet {
+      display: none;
+    }
   }
 
   &__btn {

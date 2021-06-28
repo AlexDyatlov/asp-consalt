@@ -56,6 +56,17 @@
   &--visible {
     display: block;
   }
+
+  @include small-tablet {
+    padding: 30px 40px;
+    width: 400px;
+    min-height: 420px;
+  }
+
+  @include small-mobile {
+    padding: 25px 15px;
+    width: 300px;
+  }
 }
 
 .modal__info {
@@ -65,11 +76,26 @@
     font-size: 30px;
     line-height: 36px;
     text-align: center;
+
+    @include small-tablet {
+      font-size: 24px;
+      line-height: 30px;
+    }
+
+    @include small-mobile {
+      font-size: 22px;
+      line-height: 28px;
+      text-align: left;
+    }
   }
 
   &-descr {
     margin-bottom: 30px;
     text-align: center;
+
+    @include small-mobile {
+      text-align: left;
+    }
   }
 }
 
@@ -107,6 +133,12 @@
       color: $color-black;
       background-color: $color-silver;
       cursor: not-allowed;
+    }
+
+    @include small-tablet {
+      height: 40px;
+      font-size: 16px;
+      line-height: 22px;
     }
   }
 }

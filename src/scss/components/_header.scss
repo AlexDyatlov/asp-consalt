@@ -1,3 +1,5 @@
+@import "../mixins";
+
 .header__top {
   &-inner {
     display: flex;
@@ -5,6 +7,15 @@
     justify-content: space-between;
     border-bottom: 1px solid $color-grey;
     min-height: 80px;
+
+    @include middle-tablet {
+      border-bottom: transparent;
+    }
+
+    @include mobile {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 }
 
@@ -46,6 +57,19 @@
       background-color: $color-main;
     }
   }
+
+  @include tablet {
+    justify-content: flex-end;
+    max-width: 160px;
+  }
+
+  @include middle-tablet {
+    margin-right: 95px;
+  }
+
+  @include mobile {
+    margin: 10px 0;
+  }
 }
 
 .header__info {
@@ -59,10 +83,18 @@
       color: $color-black;
     }
   }
+
+  @include tablet {
+    display: none;
+  }
 }
 
 .header__bottom {
   border-bottom: 1px solid $color-grey;
+
+  @include middle-tablet {
+    border-bottom: transparent;
+  }
 }
 
 .burger {
@@ -90,6 +122,13 @@
 
   .bottom {
     stroke-dasharray: 40 172;
+  }
+
+  @include middle-tablet {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    display: block;
   }
 }
 

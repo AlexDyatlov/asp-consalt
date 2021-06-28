@@ -23,6 +23,10 @@
   &:not(:last-child) {
     margin-bottom: 40px;
   }
+
+  @include small-tablet {
+    padding: 30px 15px;
+  }
 }
 
 .reviews__info {
@@ -36,5 +40,14 @@
     height: 70px;
     max-width: 70px;
     fill: $color-main;
+
+    @include small-mobile {
+      margin: 0 auto 15px;
+    }
+  }
+
+  @include small-mobile {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }

@@ -8,9 +8,25 @@
     font-weight: 400;
     font-size: 38px;
     line-height: 1.2;
+
+    @include small-tablet {
+      font-size: 22px;
+    }
+
+    @include small-mobile {
+      font-size: 17px;
+    }
   }
 
   &__btn {
     padding: 15px 60px;
+  }
+
+  @include tablet {
+    padding: 30px 0 80px;
+  }
+
+  @include mobile {
+    padding: 20px 0 50px;
   }
 }

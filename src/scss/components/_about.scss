@@ -19,6 +19,20 @@
     font-weight: 400;
     font-size: 24px;
     line-height: 30px;
+
+    @include tablet {
+      max-width: 100%;
+    }
+
+    @include small-tablet {
+      font-size: 20px;
+      line-height: 26px;
+    }
+
+    @include small-mobile {
+      font-size: 18px;
+      line-height: 24px;
+    }
   }
 
   &__link {
