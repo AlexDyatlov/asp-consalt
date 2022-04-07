@@ -1,0 +1,87 @@
+.tariffs-agreements {
+  background-color: #F2F2F2;
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    @include mobile {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 20px 0;
+    }
+  }
+
+  &__item {
+    @include mobile {
+      padding-bottom: 14px;
+      border-bottom: 2px solid $color-brand;
+    }
+
+    &:nth-child(odd) {
+      padding-right: 44px;
+      border-right: 2px solid $color-brand;
+
+      @include tablet {
+        padding-right: 40px;
+      }
+
+      @include small-tablet {
+        padding-right: 25px;
+      }
+
+      @include mobile {
+        border-right: none;
+        padding-right: 0;
+      }
+    }
+
+    &:nth-child(even) {
+      padding-left: 79px;
+
+      @include tablet {
+        padding-left: 40px;
+      }
+
+      @include small-tablet {
+        padding-left: 25px;
+      }
+
+      @include mobile {
+        padding-left: 0;
+      }
+    }
+
+    &:not(:nth-last-child(-n + 2)) {
+      padding-bottom: 28px;
+      border-bottom: 2px solid $color-brand;
+
+      @include mobile {
+        padding-bottom: 14px;
+      }
+    }
+
+    &:nth-child(n + 3) {
+      padding-top: 51px;
+
+      @include tablet {
+        padding-top: 40px;
+      }
+
+      @include small-tablet {
+        padding-top: 25px;
+      }
+
+      @include mobile {
+        padding-top: 0;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 33px;
+
+    @include small-tablet {
+      margin-bottom: 20px;
+    }
+  }
+}

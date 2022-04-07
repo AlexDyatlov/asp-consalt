@@ -5,7 +5,9 @@ const cleanCSS = require('gulp-clean-css');
 const uglify = require('gulp-uglify-es').default;
 const del = require('del');
 const browserSync = require('browser-sync').create();
-const sass = require('gulp-sass');
+const sass = require('sass');
+const gulpSass = require('gulp-sass');
+const mainSass = gulpSass(sass);
 const svgSprite = require('gulp-svg-sprite');
 const fileInclude = require('gulp-file-include');
 const sourcemaps = require('gulp-sourcemaps');
@@ -15,7 +17,7 @@ const revDel = require('gulp-rev-delete-original');
 const htmlmin = require('gulp-htmlmin');
 const gulpif = require('gulp-if');
 const notify = require('gulp-notify');
-const image = require('gulp-image');
+const image = require('gulp-imagemin');
 const { readFileSync } = require('fs');
 const concat = require('gulp-concat');
 
@@ -41,7 +43,8 @@ const svgSprites = () => {
 const styles = () => {
   return src('./src/scss/**/*.scss')
     .pipe(gulpif(!isProd, sourcemaps.init()))
-    .pipe(sass().on("error", notify.onError()))
+    // .pipe(sass().on("error", notify.onError()))
+    .pipe(mainSass())
     .pipe(autoprefixer({
       cascade: false,
     }))
@@ -53,7 +56,8 @@ const styles = () => {
 
 const stylesBackend = () => {
 	return src('./src/scss/**/*.scss')
-		.pipe(sass().on("error", notify.onError()))
+		// .pipe(sass().on("error", notify.onError()))
+    .pipe(mainSass())
     .pipe(autoprefixer({
       cascade: false,
 		}))
@@ -93,17 +97,17 @@ const resources = () => {
 }
 
 const images = () => {
-  return src([
-    './src/img/**.jpg',
-    './src/img/**.png',
-    './src/img/**.jpeg',
-    './src/img/*.svg',
-    './src/img/**/*.jpg',
-		'./src/img/**/*.png',
-		'./src/img/**/*.jpeg'
-    ])
-    .pipe(gulpif(isProd, image()))
-    .pipe(dest('./app/img'))
+  return src(['./src/img/**/**.{jpg,jpeg,png,svg}'])
+  .pipe(gulpif(isProd, image([
+    image.mozjpeg({
+      quality: 80,
+      progressive: true
+    }),
+    image.optipng({
+      optimizationLevel: 2
+    }),
+  ])))
+  .pipe(dest('./app/img'))
 };
 
 const htmlInclude = () => {
@@ -129,8 +133,7 @@ const watchFiles = () => {
   watch('./src/partials/**/*.html', htmlInclude);
   watch('./src/*.html', htmlInclude);
   watch('./src/resources/**', resources);
-  watch('./src/img/*.{jpg,jpeg,png,svg}', images);
-  watch('./src/img/**/*.{jpg,jpeg,png}', images);
+  watch('./src/img/**/**.{jpg,jpeg,png,svg}', images);
   watch('./src/img/svg/**.svg', svgSprites);
 }
 

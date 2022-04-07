@@ -40,7 +40,6 @@
 }
 
 .table {
-  margin-bottom: 100px;
   border-collapse: collapse;
   width: 100%;
   max-width: 100%;
@@ -56,12 +55,19 @@
   &__btn {
     display: block;
     margin: 10px auto 0;
-    padding: 10px 24px;
+    padding: 8px 22px;
     width: 100%;
+    border: 2px solid $color-brand;
+    background: transparent;
 
     &:disabled {
       background-color: #acb5bd;
       cursor: not-allowed;
+      border: transparent;
+    }
+
+    &:hover:not(:disabled) {
+      background-color: $color-brand;;
     }
   }
 

@@ -1,0 +1,18 @@
+.benefits {
+  background-color: #F2F2F2;
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 36px 20px;
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include small-tablet {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 25px 20px;
+    }
+  }
+}

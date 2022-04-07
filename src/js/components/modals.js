@@ -1,7 +1,8 @@
 const btns = document.querySelectorAll('.modal-btn'),
       modalOverlay = document.querySelector('.modal-overlay'),
       closeBtn = document.querySelectorAll('.modal-close'),
-      modals = document.querySelectorAll('.modal');
+      modals = document.querySelectorAll('.modal'),
+      fieldProduct = document.querySelector('.modal__form-field--product');
 
 btns.forEach((el) => {
   el.addEventListener('click', (e) => {
@@ -13,6 +14,11 @@ btns.forEach((el) => {
 
     document.querySelector(`[data-target="${path}"]`).classList.add('modal--visible')
     modalOverlay.classList.add('modal-overlay--visible');
+
+    if (el.dataset.name) {
+      const productName = el.dataset.name;
+      fieldProduct.placeholder = productName;
+    }
   });
 });
 

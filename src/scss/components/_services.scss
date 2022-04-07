@@ -36,6 +36,23 @@
       height: 100%;
       background-color: rgba(0, 0, 0, 0.3);
     }
+
+    &--secondary {
+      display: flex;
+      text-align: center;
+
+      &::before {
+        content: initial;
+      }
+
+      .services__content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+      }
+    }
   }
 }
 
@@ -81,6 +98,109 @@
   @include tablet {
     padding-top: 120px;
     padding-left: 0;
+  }
+}
+
+.services__info {
+  font-size: 24px;
+  line-height: 1.5;
+  color: $color-black;
+
+  @include tablet {
+    font-size: 15px;
+  }
+
+  @include mobile {
+    font-size: 12px;
+    line-height: 1.2;
+  }
+
+  &-title {
+    max-width: 1100px;
+  }
+
+  &-title,
+  &-text {
+    margin: 0 auto;
+  }
+
+  &-caption,
+  &-subtitle,
+  &-descr {
+    display: block;
+  }
+
+  &-caption {
+    margin-bottom: 30px;
+    padding-top: 20px;
+    font-size: 48px;
+    line-height: 1.2;
+    text-transform: uppercase;
+
+    @include tablet {
+      font-size: 32px;
+      margin-bottom: 22px;
+    }
+
+    @include mobile {
+      font-size: 24px;
+    }
+  }
+
+  &-subtitle {
+    position: relative;
+    margin: 37px auto 49px;
+    font-size: 48px;
+    line-height: 1.2;
+    width: fit-content;
+
+    @include tablet {
+      margin-top: 25px;
+      margin-bottom: 30px;
+      font-size: 26px;
+    }
+
+    @include mobile {
+      font-size: 20px;
+      margin-top: 17px;
+      margin-bottom: 25px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 4px;
+      background-color: $color-main;
+      left: 0;
+      bottom: 2px;
+    }
+  }
+
+  &-subject {
+    font-size: 32px;
+    line-height: 40px;
+
+    @include mobile {
+      font-size: 26px;
+    }
+  }
+
+  &-text {
+    max-width: 790px;
+  }
+
+  &-descr {
+    margin-top: 30px;
+    padding-bottom: 25px;
+    font-size: 16px;
+    line-height: 1.5;
+
+    @include mobile {
+      margin-top: 24px;
+      font-size: 14px;
+      line-height: 1.2;
+    }
   }
 }
 

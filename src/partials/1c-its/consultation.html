@@ -1,0 +1,71 @@
+<section class="consultation">
+  <div class="container">
+    <h2 class="caption">
+      Остались вопросы или хотите воспользоваться акцией?
+      <span class="caption__subtitle">
+        Свяжитесь с нами, мы с радостью проконсультируем!
+      </span>
+    </h2>
+    <div class="consultation__inner">
+
+      <ul class="consultation__list">
+        <li class="consultation__item">
+          <svg>
+            <use xlink:href="img/sprite.svg#location"></use>
+          </svg>
+          <p class="consultation__text">Санкт-Петербург, пр-кт Обуховской обороны д.70к2, офис 625</p>
+        </li>
+        <li class="consultation__item">
+          <svg>
+            <use xlink:href="img/sprite.svg#phone"></use>
+          </svg>
+          <a class="consultation__text" href="tel:78129803682">+7 (812) 980-36-82</a>
+        </li>
+        <li class="consultation__item">
+          <svg>
+            <use xlink:href="img/sprite.svg#email"></use>
+          </svg>
+          <a class="consultation__text" href="mailto:office@asp-consalt.ru">office@asp-consalt.ru</a>
+        </li>
+        <li class="consultation__item">
+          <svg>
+            <use xlink:href="img/sprite.svg#location"></use>
+          </svg>
+          <p class="consultation__text">ПН-ПТ 09.00 до 18.00</p>
+        </li>
+      </ul>
+
+
+      <form class="form consultation__form" method="POST">
+        <input type="hidden" name="form_subject" value="Форма с страницы контактов">
+        <input type="hidden" name="admin_email[]" value="office@asp-consalt.ru">
+        <label>
+          <span class="visually-hidden">Имя</span>
+          <input class="contcats__form-field" type="text" name="Имя" placeholder="Ваше имя" data-validate-field="name">
+        </label>
+        <label>
+          <span class="visually-hidden">Почта</span>
+          <input class="contcats__form-field" type="email" name="e-mail" placeholder="Ваш E-mail" data-validate-field="email">
+        </label>
+        <label>
+          <span class="visually-hidden">Ваша организация</span>
+          <input class="contcats__form-field" type="text" name="Компания" placeholder="Ваша организация">
+        </label>
+        <label>
+          <span class="visually-hidden">Сообщение</span>
+          <textarea class="contcats__form-field" name="Сообщение" placeholder="Сообщение"></textarea>
+        </label>
+        <label class="form__politics">
+          <input class="checkbox" type="checkbox" checked="checked">
+          <span class="form__politics-descr">
+            Я согласен на <a class="form__politics-link" href="policy.html" target="_blank">
+              обработку персональных данных
+            </a>
+          </span>
+        </label>
+        <button class="contcats__form-btn" type="submit">Отправить</button>
+      </form>
+
+    </div>
+  </div>
+</section>

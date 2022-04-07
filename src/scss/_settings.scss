@@ -90,6 +90,36 @@ body {
   }
 }
 
+.descr {
+  margin-bottom: 40px;
+  font-size: 24px;
+  line-height: 1.4;
+  text-align: center;
+
+  @include mobile {
+    margin-bottom: 30px;
+    font-size: 20px;
+  }
+}
+
+.caption {
+  margin-bottom: 60px;
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-align: center;
+
+  @include mobile {
+    font-size: 22px;
+    margin-bottom: 40px;
+  }
+
+  &__subtitle {
+    display: block;
+    margin-top: 20px;
+  }
+}
+
 .main-title {
   margin-bottom: 30px;
   font-weight: 700;
@@ -120,6 +150,14 @@ button {
   @include small-mobile {
     width: 100%;
     text-align: center;
+  }
+}
+
+.section {
+  padding: 75px 0;
+
+  @include small-tablet {
+    padding: 35px 0;
   }
 }
 

@@ -1,10 +1,11 @@
 @include('partials/head.html', {
   "title": "1С:ИТС",
   "meta": {
-    "description": "Информационно-технологическое сопровождение",
+    "description": "1С:ИТС (Информационно-технологическое сопровождение) — это комплексная поддержка пользователей программ «1С»",
     "keywords": "АСП-Консалт, 1С:ИТС, Отраслевой, 1С:Предприятие, Услуги, Контакты"
   }
 })
+
 <body>
 	<div class="site-container">
 		@include('partials/header/header-1c.html')
@@ -14,11 +15,17 @@
           <ul class="breadcrumbs__list">
             <li class="breadcrumbs__list-item"><a class="breadcrumbs__list-link" href="index.html">Главная</a></li>
             <li class="breadcrumbs__list-item"><a class="breadcrumbs__list-link" href="its.html">1С</a></li>
-            <li class="breadcrumbs__list-item"><span class="breadcrumbs__list-link breadcrumbs__list--current">1С:ИТС/1С:КП</span></li>
+            <li class="breadcrumbs__list-item"><span class="breadcrumbs__list-link breadcrumbs__list--current">1С:ИТС</span></li>
           </ul>
         </div>
       </div>
-      @include('partials/services/its.html')
+      @include('partials/1c-its/hero.html')
+      @include('partials/1c-its/benefits.html')
+      @include('partials/1c-its/partner.html')
+      @include('partials/1c-its/information-support.html')
+      @include('partials/1c-its/1c-tariffs.html')
+      @include('partials/1c-its/tariffs.html')
+      @include('partials/1c-its/consultation.html')
 		</main>
     @include('partials/modals.html')
     @include('partials/footer.html')
