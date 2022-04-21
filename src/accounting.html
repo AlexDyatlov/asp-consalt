@@ -1,0 +1,36 @@
+@include('partials/head.html', {
+  "title": "Бухгалтерское обслуживание",
+  "meta": {
+    "description": "",
+    "keywords": ""
+  }
+})
+
+<body>
+	<div class="site-container">
+		@include('partials/header/header-1c.html')
+    <main class="main">
+      <div class="breadcrumbs">
+        <div class="container">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__list-item"><a class="breadcrumbs__list-link" href="index.html">Главная</a></li>
+            <li class="breadcrumbs__list-item"><a class="breadcrumbs__list-link" href="its.html">1С</a></li>
+            <li class="breadcrumbs__list-item"><span class="breadcrumbs__list-link breadcrumbs__list--current">Бухгалтерское обслуживание</span></li>
+          </ul>
+        </div>
+      </div>
+      @include('partials/accounting/hero.html')
+      @include('partials/accounting/benefits.html')
+      @include('partials/accounting/information-support.html')
+      @include('partials/accounting/price.html')
+      @include('partials/content/consultation.html', {
+        "text": "Остались вопросы?"
+      })
+		</main>
+    @include('partials/modals.html')
+    @include('partials/footer.html')
+  </div>
+  <script src="js/vendor.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

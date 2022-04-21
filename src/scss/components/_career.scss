@@ -1,27 +1,23 @@
-.career__item {
-  border: 1px solid $color-silver;
+.career {
+  &__item {
+    border: 1px solid $color-silver;
 
-  &-title {
-    position: relative;
-    display: block;
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__btn {
     padding: 30px;
-    font-weight: 400;
     font-size: 18px;
     line-height: 24px;
-    text-align: left;
     transition: background-color 0.3s;
-    cursor: pointer;
-    user-select: none;
 
     &::before {
-      content: "";
-      position: absolute;
       right: 20px;
-      top: 28px;
       width: 22px;
       height: 22px;
-      background: center/cover no-repeat url("../img/arrow-menu.svg");
-      transition: transform 0.3s;
+      background-image: url("../img/arrow-menu.svg");
 
       @include middle-tablet {
         width: 18px;
@@ -39,17 +35,23 @@
       font-size: 16px;
       line-height: 22px;
     }
+
+    ._open & {
+      background-color: $color-wild-sand;
+    }
   }
 
-  &:not(:last-child) {
-    margin-bottom: 40px;
+  &__content {
+    padding-right: 20px;
+    padding-left: 20px;
+
+    ._open & {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
   }
-}
 
-.career__content {
-  padding: 30px;
-
-  &-text {
+  &__content-text {
     margin-bottom: 20px;
     text-transform: uppercase;
 
@@ -57,34 +59,4 @@
       display: block;
     }
   }
-}
-
-.accordion__control {
-  padding: 0;
-  width: 100%;
-}
-
-.accordion__content {
-  overflow: hidden;
-  padding: 0 20px;
-  max-height: 0;
-  box-sizing: content-box;
-  opacity: 0;
-  transition: all 0.3s ease-out;
-  will-change: max-height;
-}
-
-.open .accordion__control {
-  background-color: $color-wild-sand;
-
-  .career__item-title {
-    &::before {
-      transform: rotate(180deg);
-    }
-  }
-}
-
-.open .accordion__content {
-  padding: 20px;
-  opacity: 1;
 }

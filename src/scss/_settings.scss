@@ -54,15 +54,6 @@ body {
   height: 100%;
 }
 
-.visually-hidden {
-  position: absolute;
-  left: -10000px;
-  top: auto;
-  overflow: hidden;
-  width: 1px;
-  height: 1px;
-}
-
 .main {
   min-height: calc(100vh - 570px);
 }
@@ -102,6 +93,17 @@ body {
   }
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
 .caption {
   margin-bottom: 60px;
   font-size: 24px;
@@ -118,6 +120,10 @@ body {
     display: block;
     margin-top: 20px;
   }
+
+  &--reset {
+    margin-bottom: 0;
+  }
 }
 
 .main-title {
@@ -129,8 +135,9 @@ body {
 }
 
 button {
-  border: none;
+  padding: 0;
   background-color: transparent;
+  border: none;
   cursor: pointer;
 }
 
@@ -158,6 +165,29 @@ button {
 
   @include small-tablet {
     padding: 35px 0;
+  }
+
+  &--secondary {
+    background-color: #f2f2f2;
+  }
+}
+
+.line {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -30px;
+    width: 420px;
+    height: 2px;
+    background-color: $color-brand;
+
+    @include mobile {
+      content: initial;
+    }
   }
 }
 

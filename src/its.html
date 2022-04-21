@@ -25,7 +25,9 @@
       @include('partials/1c-its/information-support.html')
       @include('partials/1c-its/1c-tariffs.html')
       @include('partials/1c-its/tariffs.html')
-      @include('partials/1c-its/consultation.html')
+      @include('partials/content/consultation.html', {
+        "text": "Остались вопросы или хотите воспользоваться акцией?"
+      })
 		</main>
     @include('partials/modals.html')
     @include('partials/footer.html')

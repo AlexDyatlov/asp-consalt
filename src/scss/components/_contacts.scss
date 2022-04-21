@@ -117,22 +117,6 @@
     line-height: 24px;
   }
 
-  &-field {
-    display: block;
-    margin-bottom: 15px;
-    outline: transparent;
-    border: 1px solid $color-silver;
-    padding: 12px 15px;
-    width: 100%;
-    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-
-    &:focus {
-      border-color: $color-main;
-      box-shadow: 0 0 0 1px $color-main;
-      transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    }
-  }
-
   &-btn {
     position: relative;
     display: block;
@@ -179,14 +163,30 @@
     }
   }
 
-  textarea {
+  @include small-tablet {
+    max-width: 100%;
+  }
+}
+
+.field {
+  display: block;
+  margin-bottom: 15px;
+  outline: transparent;
+  border: 1px solid $color-silver;
+  padding: 12px 15px;
+  width: 100%;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+  &:focus {
+    border-color: $color-main;
+    box-shadow: 0 0 0 1px $color-main;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+
+  &--textarea {
     margin-bottom: 20px;
     height: 110px;
     resize: none;
-  }
-
-  @include small-tablet {
-    max-width: 100%;
   }
 }
 

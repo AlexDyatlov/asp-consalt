@@ -1,0 +1,39 @@
+.card-price {
+  display: flex;
+  flex-direction: column;
+  padding: 26px;
+  width: 100%;
+  min-height: 288px;
+  font-size: 18px;
+  line-height: 1.2;
+  color: $color-black;
+  background-color: $color-white;
+  border: 1px solid $color-brand;
+
+  @include mobile {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 370px;
+  }
+
+  &__title {
+    margin-bottom: 27px;
+    font-weight: 700;
+  }
+
+  &__text {
+    margin-bottom: 10px;
+
+    p:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__price {
+    margin-top: auto;
+  }
+
+  &__value {
+    font-weight: 700;
+  }
+}

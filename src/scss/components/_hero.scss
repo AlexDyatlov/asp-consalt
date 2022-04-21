@@ -2,5 +2,44 @@
   margin-bottom: 0;
   padding-top: 23px;
   background: center/cover no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   text-align: center;
+
+  &--secondary {
+    padding-top: 77px;
+    min-height: 560px;
+    text-align: left;
+    background-position: left;
+
+    @include tablet {
+      padding-top: 50px;
+      min-height: 340px;
+    }
+
+    .services__info-caption {
+      margin-bottom: 70px;
+      padding-top: 0;
+      text-transform: none;
+
+      @include mobile {
+        margin-bottom: 35px;
+      }
+    }
+
+    .services__info-title {
+      margin-bottom: 70px;
+
+      @include mobile {
+        margin-bottom: 50px;
+      }
+    }
+
+    .services__info-text,
+    .services__info-title {
+      margin-left: 0;
+      max-width: 100%;
+    }
+  }
 }

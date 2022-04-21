@@ -92,3 +92,18 @@ validateForms('.modal__form--bitrix', {
     required: true
   }
 }, '.thanks-popup', 'send goal');
+
+if (document.querySelector('.calculation__form')) {
+  validateForms('.calculation__form', {
+    email: {
+      required: true,
+      email: true
+    },
+    name: {
+      required: true
+    },
+    phone: {
+      required: true
+    }
+  }, '.thanks-popup', 'send goal');
+}

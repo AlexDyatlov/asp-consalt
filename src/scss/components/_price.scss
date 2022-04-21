@@ -1,0 +1,56 @@
+.price {
+  &__wrapper {
+    padding-bottom: 60px;
+    background: left/cover no-repeat;
+  }
+
+  &__inner {
+    margin-bottom: 65px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+
+    @include middle-tablet {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 15px;
+    }
+
+    @include mobile {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__title {
+
+
+    .caption {
+      margin-bottom: 13px;
+      position: relative;
+      z-index: 1;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 45px;
+        height: 45px;
+        background: center/cover no-repeat url("../img/smile.png");
+        z-index: -1;
+
+        @include mobile {
+          top: -8%;
+        }
+      }
+    }
+
+    .descr {
+      margin-bottom: 90px;
+
+      @include mobile {
+        margin-bottom: 60px;
+      }
+    }
+  }
+}

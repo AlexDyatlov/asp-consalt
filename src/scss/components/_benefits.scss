@@ -1,6 +1,4 @@
 .benefits {
-  background-color: #F2F2F2;
-
   &__inner {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -13,6 +11,22 @@
     @include small-tablet {
       grid-template-columns: repeat(1, 1fr);
       gap: 25px 20px;
+    }
+  }
+
+  &--secondary {
+    padding-bottom: 75px;
+
+    @include small-tablet {
+      padding-bottom: 35px;
+    }
+
+    .line::before {
+      bottom: -75px;
+
+      @include small-tablet {
+        bottom: -35px;
+      }
     }
   }
 }

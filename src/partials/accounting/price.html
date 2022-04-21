@@ -1,0 +1,235 @@
+<section class="price section">
+  <div class="price__wrapper" style="background-image: url('img/accounting-bg.png');">
+    <div class="container">
+      <div class="price__title">
+        <h2 class="caption">
+          Кстати, бухгалтеры АСП-Консалт не жалуются, что “программа не то считает”
+        </h2>
+        <div class="descr">
+          <p>
+            ведь АСП-Консалт является официальным партнером 1С
+          </p>
+        </div>
+      </div>
+
+      <h3 class="caption">Примеры расчета стоимости</h3>
+
+      <ul class="price__inner">
+        <li class="card-price price__item">
+          <h3 class="card-price__title">Нулевая отчетность</h3>
+          <div class="card-price__text">
+            <p>Организация не ведет деятельность?</p>
+            <p>Сдадим нулевую отчетность</p>
+          </div>
+          <div class="card-price__price">
+            Стоимость <span class="card-price__value">от 2500 руб./квартал</span>
+          </div>
+        </li>
+
+        <li class="card-price price__item">
+          <h3 class="card-price__title">ООО на ОСНО (НДС 20%)</h3>
+          <div class="card-price__text">
+            <p>Торговля оптовая до 25 операций в месяц 1 сотрудник</p>
+          </div>
+          <div class="card-price__price">
+            Стоимость <span class="card-price__value">от 8500 руб./месяц</span>
+          </div>
+        </li>
+
+        <li class="card-price price__item">
+          <h3 class="card-price__title">ООО на УСН (доход - расход)</h3>
+          <div class="card-price__text">
+            <p>Сфера услуг до 80 операций в месяц 7 сотрудников</p>
+          </div>
+          <div class="card-price__price">
+            Стоимость <span class="card-price__value">от 16500 руб./месяц</span>
+          </div>
+        </li>
+      </ul>
+
+      <h3 class="caption caption--reset">Получите индивидуальный расчет стоимости </h3>
+    </div>
+  </div>
+
+  <div class="calculation">
+    <div class="container">
+      <form class="calculation__form" method="POST">
+        <input type="hidden" name="form_subject" value="Форма с страницы бухгал. обслуживание">
+        <input type="hidden" name="admin_email[]" value="office@asp-consalt.ru">
+
+        <ul class="calculation__fields">
+          <li class="calculation__field">
+            <label>
+              <span class="visually-hidden">Имя</span>
+              <input class="field" type="text" name="Имя" placeholder="Как к вам обращаться?" data-validate-field="name">
+            </label>
+          </li>
+          <li class="calculation__field">
+            <label>
+              <span class="visually-hidden">Мобильный</span>
+              <input class="field" type="tel" name="Phone" placeholder="Контактный телефон" data-validate-field="phone">
+            </label>
+          </li>
+          <li class="calculation__field">
+            <label>
+              <span class="visually-hidden">Почта</span>
+              <input class="field" type="email" name="e-mail" placeholder="Ваш E-mail" data-validate-field="email">
+            </label>
+          </li>
+        </ul>
+
+        <div class="calculation__inner">
+          <div class="calculation__dropdown accordion">
+            <div class="calculation__caption">Форма бизнеса</div>
+            <button class="calculation__control accordion__control" aria-expanded="false" type="button">
+              Индивидуальный предприниматель
+            </button>
+            <ul class="calculation__list accordion__content" aria-hidden="true">
+              <li class="calculation__item">
+                <button class="calculation__btn" type="button">
+                  Индивидуальный предприниматель
+                </button>
+              </li>
+              <li class="calculation__item">
+                <button class="calculation__btn" type="button">
+                  ООО
+                </button>
+              </li>
+            </ul>
+            <input class="calculation__value visually-hidden" type="text" name="Бизнес" placeholder="Индивидуальный предприниматель" value="">
+          </div>
+          <div class="calculation__dropdown accordion">
+            <div class="calculation__caption">Чем занимаетесь?</div>
+            <button class="calculation__control accordion__control" aria-expanded="false" type="button">
+              Производство
+            </button>
+            <ul class="calculation__list accordion__content" aria-hidden="true">
+              <li class="calculation__item">
+                <button class="calculation__btn" type="button">
+                  Производство
+                </button>
+              </li>
+              <li class="calculation__item">
+                <button class="calculation__btn" type="button">
+                  Торговля
+                </button>
+              </li>
+              <li class="calculation__item">
+                <button class="calculation__btn" type="button">
+                  Услуги
+                </button>
+              </li>
+            </ul>
+            <input class="calculation__value visually-hidden" type="text" name="Чем занимаются" placeholder="Производство" value="">
+          </div>
+          <div class="calculation__dropdown accordion">
+            <div class="calculation__caption">Система налогообложения</div>
+            <button class="calculation__control accordion__control" aria-expanded="false" type="button">
+              ОСНО (с НДС)
+            </button>
+            <ul class="calculation__list accordion__content" aria-hidden="true">
+              <li class="calculation__item">
+                <button class="calculation__btn" type="button">
+                  ОСНО (с НДС)
+                </button>
+              </li>
+              <li class="calculation__item">
+                <button class="calculation__btn" type="button">
+                  УСН “Доходы”, 6%
+                </button>
+              </li>
+              <li class="calculation__item">
+                <button class="calculation__btn" type="button">
+                  УСН “Доходы-расходы”, 15%
+                </button>
+              </li>
+            </ul>
+            <input class="calculation__value visually-hidden" type="text" name="Налогообложение" placeholder="ОСНО (с НДС)" value="">
+          </div>
+          <div class="calculation__dropdown accordion">
+            <div class="calculation__caption">Сколько обычно операций в выписке?</div>
+            <button class="calculation__control accordion__control" aria-expanded="false" type="button">
+              до 20
+            </button>
+            <ul class="calculation__list accordion__content" aria-hidden="true">
+              <li class="calculation__item">
+                <button class="calculation__btn" type="button">
+                  до 20
+                </button>
+              </li>
+              <li class="calculation__item">
+                <button class="calculation__btn" type="button">
+                  до 50
+                </button>
+              </li>
+              <li class="calculation__item">
+                <button class="calculation__btn" type="button">
+                  до 100
+                </button>
+              </li>
+              <li class="calculation__item">
+                <button class="calculation__btn" type="button">
+                  свыше 100
+                </button>
+              </li>
+            </ul>
+            <input class="calculation__value visually-hidden" type="text" name="Операций" placeholder="до 20" value="">
+          </div>
+          <div class="calculation__box">
+            <div class="calculation__dropdown accordion">
+              <div class="calculation__caption">Сколько сотрудников в штате?</div>
+              <button class="calculation__control accordion__control" aria-expanded="false" type="button">
+                1
+              </button>
+              <ul class="calculation__list accordion__content" aria-hidden="true">
+                <li class="calculation__item">
+                  <button class="calculation__btn" type="button">1</button>
+                </li>
+                <li class="calculation__item">
+                  <button class="calculation__btn" type="button">до 5</button>
+                </li>
+                <li class="calculation__item">
+                  <button class="calculation__btn" type="button">до 20</button>
+                </li>
+                <li class="calculation__item">
+                  <button class="calculation__btn" type="button">до 50</button>
+                </li>
+                <li class="calculation__item">
+                  <button class="calculation__btn" type="button">до 100</button>
+                </li>
+                <li class="calculation__item">
+                  <button class="calculation__btn" type="button">больше 100</button>
+                </li>
+              </ul>
+              <input class="calculation__value visually-hidden" type="text" name="Сотрудники" placeholder="1" value="">
+            </div>
+            <div class="calculation__checkboxes">
+              <label class="checkbox checkbox--secondary">
+                <input class="checkbox__field visually-hidden" type="checkbox" name="checkbox1" value="Ведение кадрового учета">
+                <span class="checkbox__descr">
+                  Ведение кадрового учета
+                </span>
+              </label>
+              <label class="checkbox checkbox--secondary">
+                <input class="checkbox__field visually-hidden" type="checkbox" name="checkbox2" value="Ведение банк-клиента">
+                <span class="checkbox__descr">
+                  Ведение банк-клиента
+                </span>
+              </label>
+            </div>
+          </div>
+          <div class="calculation__textarea">
+            <div class="calculation__caption">Что-то еще важное?</div>
+            <label>
+              <textarea class="field field--textarea" name="Сообщение" placeholder=""></textarea>
+            </label>
+          </div>
+        </div>
+
+
+        <button class="btn calculation__button" type="submit">Рассчитать</button>
+      </form>
+    </div>
+  </div>
+
+</section>

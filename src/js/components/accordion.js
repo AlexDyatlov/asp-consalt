@@ -1,15 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
 	const accordions = document.querySelectorAll('.accordion');
 
-	accordions.forEach(el => {
-		el.addEventListener('click', (e) => {
+  accordions.forEach(function (dropDownWrapper) {
+		dropDownWrapper.addEventListener('click', (e) => {
 			const self = e.currentTarget;
 			const control = self.querySelector('.accordion__control');
 			const content = self.querySelector('.accordion__content');
 
-			self.classList.toggle('open');
+      const calculationBtns = dropDownWrapper.querySelectorAll('.calculation__btn');
+      const dropDownBtn = dropDownWrapper.querySelector('.calculation__control');
+      const dropDownInput = dropDownWrapper.querySelector('.calculation__value');
 
-			if (self.classList.contains('open')) {
+
+			self.classList.toggle('_open');
+
+			if (self.classList.contains('_open')) {
 				control.setAttribute('aria-expanded', true);
 				content.setAttribute('aria-hidden', false);
 				content.style.maxHeight = content.scrollHeight + 'px';
@@ -18,11 +23,15 @@ document.addEventListener('DOMContentLoaded', () => {
 				content.setAttribute('aria-hidden', true);
 				content.style.maxHeight = null;
 			}
-		});
-	});
-});
 
-AOS.init({
-  once: true,
-  delay: 400
+      calculationBtns.forEach(el => {
+        el.addEventListener('click', (e) => {
+            dropDownBtn.textContent = el.textContent;
+            dropDownInput.value = el.textContent;
+        })
+      })
+
+		});
+
+	});
 });

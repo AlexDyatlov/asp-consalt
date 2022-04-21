@@ -147,55 +147,6 @@
   }
 }
 
-.form__politics {
-  cursor: pointer;
-
-  input {
-    position: absolute;
-    z-index: -1;
-    opacity: 0;
-  }
-
-  &-descr {
-    user-select: none;
-
-    &::before {
-      content: "";
-      display: inline-block;
-      vertical-align: -1px;
-      margin-right: 10px;
-      border: 1px solid $color-silver;
-      border-radius: 0.25em;
-      width: 14px;
-      height: 14px;
-      background: center/70% no-repeat;
-    }
-  }
-
-  &-link {
-    color: #3b55e6;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-}
-
-.form__politics input:not(:disabled):not(:checked) + .form__politics-descr:hover::before {
-  border-color: $color-dark-main;
-}
-
-.form__politics input:focus + .form__politics-descr::before {
-  border-color: $color-dark-main;
-  box-shadow: 0 0 0 0.2rem rgba(252, 197, 33, 0.25);
-}
-
-.form__politics input:checked + .form__politics-descr::before {
-  border-color: $color-dark-main;
-  background-image: url("../img/checked.svg");
-  background-color: $color-dark-main;
-}
-
 .modal__form-field.js-validate-error-field {
   border: none !important;
   border-bottom: 1px solid #f30202 !important;
